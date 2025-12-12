@@ -1,0 +1,324 @@
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+  <SIGNONMSGSRSV1>
+    <SONRS>
+      <STATUS>
+        <CODE>0
+        <SEVERITY>INFO
+      </STATUS>
+      <DTSERVER>20090123094718
+      <LANGUAGE>ENG
+    </SONRS>
+  </SIGNONMSGSRSV1>
+  <CREDITCARDMSGSRSV1>
+    <CCSTMTTRNRS>
+      <TRNUID>1
+      <STATUS>
+        <CODE>0
+        <SEVERITY>INFO
+      </STATUS>
+      <CCSTMTRS>
+        <CURDEF>EUR
+        <CCACCTFROM>
+          <ACCTID>975420019
+        </CCACCTFROM>
+        <BANKTRANLIST>
+          <DTSTART>20081222120000
+          <DTEND>20090120120000
+          <STMTTRN>
+            <TRNTYPE>DEP
+            <DTPOSTED>20090101120000
+            <DTUSER>20090101120000
+            <TRNAMT>420.39
+            <FITID>HOhGpl+PpOflZjaCe7qe1g==
+            <NAME>Geincasseerd
+            <MEMO>GEINCASSEERD VORIG;1/1/2009
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081222120000
+            <DTUSER>20081220120000
+            <TRNAMT>-22.94
+            <FITID>aynp13SNKbaRHoYIMH6Hxg==
+            <NAME>P &amp; O Ferries Ltd Po Calais
+            <MEMO>P &amp; O FERRIES LTD PO CALAIS RET GB;12/20/2008;21,00 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081223120000
+            <DTUSER>20081222120000
+            <TRNAMT>-16.15
+            <FITID>19gqdfW6ogN9XUlWy3Lk5Q==
+            <NAME>Marks &amp; Spencer
+            <MEMO>MARKS &amp; SPENCER GRAVESEND GB;12/22/2008;14,96 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081223120000
+            <DTUSER>20081222120000
+            <TRNAMT>-18.68
+            <FITID>7oL5B0fT9xA5U0rgGkM++A==
+            <NAME>Mcdonalds Rest.
+            <MEMO>MCDONALDS REST. GRAVESEND GB;12/22/2008;17,30 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081223120000
+            <DTUSER>20081222120000
+            <TRNAMT>-15.18
+            <FITID>QKhtoHdBnNPY/b6/JwwSBA==
+            <NAME>Woolworths Plc
+            <MEMO>WOOLWORTHS PLC GRAVESEND GB;12/22/2008;14,05 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081224120000
+            <DTUSER>20081222120000
+            <TRNAMT>-29.57
+            <FITID>9qtubKGEeWwo0FiYw/Oh5g==
+            <NAME>Boots/0880
+            <MEMO>BOOTS/0880 GRAVESEND GB;12/22/2008;27,41 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081224120000
+            <DTUSER>20081222120000
+            <TRNAMT>-25.89
+            <FITID>ILgZFaHy+i/hwrR3j3Z8YQ==
+            <NAME>Wh Smith
+            <MEMO>WH SMITH GRAVESEND GB;12/22/2008;24,00 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081224120000
+            <DTUSER>20081222120000
+            <TRNAMT>-12.67
+            <FITID>XQP661qjOR0lFrGUbbboRA==
+            <NAME>Primark
+            <MEMO>PRIMARK GRAVESEND GB;12/22/2008;11,74 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081225120000
+            <DTUSER>20081224120000
+            <TRNAMT>-5.19
+            <FITID>QS1iEW2NJVT+vZLjQW9yRw==
+            <NAME>Waitrose 109
+            <MEMO>WAITROSE 109 LONGFIELD GB;12/24/2008;4,84 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081228120000
+            <DTUSER>20081227120000
+            <TRNAMT>-29.99
+            <FITID>xYgffXacDkSe7oC3otqQqA==
+            <NAME>New Ash Green
+            <MEMO>NEW ASH GREEN LONGFIELD GB;12/27/2008;28,15 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081229120000
+            <DTUSER>20081228120000
+            <TRNAMT>-12.51
+            <FITID>6cI8JJZAPvQ86FSVLdRA7Q==
+            <NAME>Bonmarche 188
+            <MEMO>BONMARCHE 188 DARTFORD GB;12/28/2008;11,74 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081229120000
+            <DTUSER>20081228120000
+            <TRNAMT>-14.64
+            <FITID>NJ/b3WNZnatsoVei+1CvFQ==
+            <NAME>Wh Smith
+            <MEMO>WH SMITH DARTFORD GB;12/28/2008;13,74 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081230120000
+            <DTUSER>20081229120000
+            <TRNAMT>-52.35
+            <FITID>N4AroUpaqxmJaZIxGhPDFA==
+            <NAME>Mountain Warehouse
+            <MEMO>MOUNTAIN WAREHOUSE MAIDSTONE GB;12/29/2008;49,99 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081230120000
+            <DTUSER>20081229120000
+            <TRNAMT>-7.82
+            <FITID>jA0JYCTbfaamiQE44z9dUA==
+            <NAME>Clinton Cards
+            <MEMO>CLINTON CARDS MAIDSTONE GB;12/29/2008;7,47 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081231120000
+            <DTUSER>20081230120000
+            <TRNAMT>-23.88
+            <FITID>mpYeoZmKwTBsVJB+4vjbrg==
+            <NAME>P &amp; O Ferries Ltd Po Dover
+            <MEMO>P &amp; O FERRIES LTD PO DOVER RETA GB;12/30/2008;22,90 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081231120000
+            <DTUSER>20081230120000
+            <TRNAMT>-13.74
+            <FITID>0lONtKtgrMthTRZ282+otw==
+            <NAME>Co-op Group 520992 New Ash
+            <MEMO>CO-OP GROUP 520992 NEW ASH GREEN GB;12/30/2008;13,17 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081231120000
+            <DTUSER>20081230120000
+            <TRNAMT>-18.75
+            <FITID>pTJO/cOL6GtxdPIr8t+2gg==
+            <NAME>Pandora's Box
+            <MEMO>PANDORA'S BOX LONGFIELD GB;12/30/2008;17,98 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081222120000
+            <DTUSER>20081220120000
+            <TRNAMT>-38.22
+            <FITID>oxIhELghDu5jdS/GlXH5CQ==
+            <NAME>Game Digital
+            <MEMO>GAME DIGITAL BASINGSTOKE GB;12/20/2008;34,99 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081222120000
+            <DTUSER>20081221120000
+            <TRNAMT>-8.55
+            <FITID>XSfEeZhawxfrcMSs4ZnQqA==
+            <NAME>Toys R Us 3610
+            <MEMO>TOYS R US 3610 MEDWAY GB;12/21/2008;7,82 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081223120000
+            <DTUSER>20081222120000
+            <TRNAMT>-7.91
+            <FITID>8Pt3YLuhdPThwKHl7CRZEQ==
+            <NAME>Argos Ltd
+            <MEMO>ARGOS LTD GRAVESEND GB;12/22/2008;7,33 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081223120000
+            <DTUSER>20081222120000
+            <TRNAMT>-63.40
+            <FITID>j7aFPx3Rr3eUEgro0vJorw==
+            <NAME>Currys.digital
+            <MEMO>CURRYS.DIGITAL GRAVESEND GB;12/22/2008;58,71 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081223120000
+            <DTUSER>20081222120000
+            <TRNAMT>-123.36
+            <FITID>UBipOObR16E9ZH18m1hEKw==
+            <NAME>Game Stores Group Ltd
+            <MEMO>GAME STORES GROUP LTD GRAVESEND GB;12/22/2008;114,24 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081224120000
+            <DTUSER>20081222120000
+            <TRNAMT>-77.61
+            <FITID>f3IHpQXf51KbwszrTlUqtw==
+            <NAME>Primark
+            <MEMO>PRIMARK GRAVESEND GB;12/22/2008;71,94 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081224120000
+            <DTUSER>20081222120000
+            <TRNAMT>-56.36
+            <FITID>fASCocy7AkGD+2j8Ad9Spg==
+            <NAME>Wilkinson Gravesend
+            <MEMO>WILKINSON GRAVESEND 143 GB;12/22/2008;52,24 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081225120000
+            <DTUSER>20081224120000
+            <TRNAMT>-114.37
+            <FITID>05RUIw4PD1UQCw2xNntNMg==
+            <NAME>Asda Superstore
+            <MEMO>ASDA SUPERSTORE GRAVESEND GB;12/24/2008;106,65 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081229120000
+            <DTUSER>20081227120000
+            <TRNAMT>-9.80
+            <FITID>pj6FkvPpLpV3oD661CPAWQ==
+            <NAME>Amf Bowling
+            <MEMO>AMF BOWLING GRAVESEND GB;12/27/2008;9,20 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081229120000
+            <DTUSER>20081227120000
+            <TRNAMT>-39.96
+            <FITID>R7SMIUnjHtwr1Z97GVRcKg==
+            <NAME>Amf Bowling
+            <MEMO>AMF BOWLING GRAVESEND GB;12/27/2008;37,50 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081229120000
+            <DTUSER>20081228120000
+            <TRNAMT>-29.51
+            <FITID>wQEmBzm9cof9dHob05pQyw==
+            <NAME>Wimpy High St
+            <MEMO>WIMPY HIGH ST DARTF GB;12/28/2008;27,69 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081230120000
+            <DTUSER>20081228120000
+            <TRNAMT>-41.89
+            <FITID>bbJ8CxQ/5cHX6r3NyJxQSg==
+            <NAME>The Orchard Theatr Dartford
+            <MEMO>THE ORCHARD THEATR DARTFORD 04 GB;12/28/2008;40,00 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20081231120000
+            <DTUSER>20081229120000
+            <TRNAMT>-20.86
+            <FITID>4eb8jBL3sF67DBA8W2zwvg==
+            <NAME>Sports World
+            <MEMO>SPORTS WORLD MAIDSTONE GB;12/29/2008;20,00 GBP
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>PAYMENT
+            <DTPOSTED>20090105120000
+            <DTUSER>20090103120000
+            <TRNAMT>-648.50
+            <FITID>k+argNEf28UaVWg5SI5FXA==
+            <NAME>Interhome Ag Dueren
+            <MEMO>INTERHOME AG DUEREN DE;1/3/2009
+          </STMTTRN>
+        </BANKTRANLIST>
+        <LEDGERBAL>
+          <BALAMT>-1600.25
+          <DTASOF>20090120120000
+        </LEDGERBAL>
+      </CCSTMTRS>
+    </CCSTMTTRNRS>
+  </CREDITCARDMSGSRSV1>
+</OFX>

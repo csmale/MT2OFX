@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="Configuration\Bank-Specific_Configuration.htm" />
+<meta name="topic-status" content="Ready for Review" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Bank-Specific Configuration</title>
+<link rel="StyleSheet" href="../../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="Bank-Specific Configuration" ?>Bank-Specific Configuration<?rh-variable_end ?></h1>
+<p>In spite of the fact that MT940 is a defined standard, banks use differing interpretations of the official standard which is controlled by SWIFT.</p>
+<p>&#160;</p>
+<p>Each bank identified in the <a href="_BankRules__Section.htm">[BankRules] Section</a>, needs to have its own section in which the specific treatment is defined.</p>
+<p>&#160;</p>
+<p>[<span style="font-style: italic;">bank</span>]</p>
+<p>BankName=<span style="font-style: italic;">bank_name</span></p>
+<p>Structured86=0</p>
+<p>FindPayee=ABNA_FindPayee</p>
+<p>FindTxnDate=ABNA_FindTxnDate</p>
+<p>FindServerTime=ABNA_FindServerTime</p>
+<p>IntuitBankID=00508</p>
+<p>ScriptFile=ABN Amro.vbs</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p># bank variant configuration. The section name must be equal to the bank name, which is matched</p>
+<p># against the rules given above. If an exact section name</p>
+<p># match is not found, the default is used which is defined under "[*]".</p>
+<p># BankName: String (not currently used)</p>
+<p># Structured86: 1=the :86: record is structured as described in the</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<?rh-glo_start ?>&#160;SWIFT<?rh-glo_end ?> standard, otherwise it is unstructured</p>
+<p># FindPayee: The name of the internal function used to extract the</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;payee name from the description in :86:</p>
+<p># FindTxnDate: The name of the internal function used to extract the</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;transaction date from the description in :86:</p>
+<p># FindServerTime: The name of the internal function used to derive the</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;server timestamp from the file</p>
+<p># IntuitBankID: The identifier given to the bank by Intuit if the bank</p>
+<p># &#160;&#160;&#160;&#160;&#160;has signed up to support Quicken. There are rumours that</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Quicken will not import an OFX file unless the &lt;INTU.BID&gt;</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;field is present and correct!</p>
+<p># ScriptFile: The name of the file containing VBScript code used to postprocess</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;the transaction. If present, this code is used INSTEAD of the internal</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;functions mentioned above. For details of the scripting capabilities</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;see the Help information in mt2ofx.chm.</p>
+<p># SkipEmptyMemoFields: 1=Empty fields in the :86: data are ignored, thus avoiding</p>
+<p># &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;consecutive, leading and/or trailing delimiters in the output.</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

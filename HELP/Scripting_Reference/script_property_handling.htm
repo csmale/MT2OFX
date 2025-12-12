@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="Ready for Review" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Script Property Handling</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="Script Property Handling" ?>Script Property Handling<?rh-variable_end ?></h1>
+<p>In version 3.2 a facility was introduced for scripts to have persistent storage for configuration values. The program includes a <a href="../Configuration/Configuring_Script_Properties.htm">special dialog</a> to allow these values to be configured by the user.</p>
+<p>&#160;</p>
+<p>Scripts must take four steps to use this facility.</p>
+<p>&#160;</p>
+<ol type="1">
+<li class="p">
+<p>Declare its property set</p>
+</li>
+<li class="p">
+<p>Permit access to the configuration dialog</p>
+</li>
+<li class="p">
+<p>Load the property set at the start of processing</p>
+</li>
+<li class="p">
+<p>Use the property values during processing</p>
+</li>
+</ol>
+<p>&#160;</p>
+<h5>Declaring the property set</h5>
+<p>A script must declare which properties it uses. Each property has one of the following data types:</p>
+<p>&#160;</p>
+<ul type="disc">
+<li class="p">
+<p style="margin-left: 0px;">ptString (1): a string value</p>
+</li>
+<li class="p">
+<p style="margin-left: 0px;">ptInteger (2): an integer value</p>
+</li>
+<li class="p">
+<p style="margin-left: 0px;">ptDate (3): a date</p>
+</li>
+<li class="p">
+<p style="margin-left: 0px;">ptBoolean (4): can be either True or False</p>
+</li>
+<li class="p">
+<p style="margin-left: 0px;">ptFloat (5): a floating-point value</p>
+</li>
+<li class="p">
+<p style="margin-left: 0px;">ptChoice (6): a (string) value selected from a fixed list</p>
+</li>
+<li class="p">
+<p>ptCurrency (7): a three-letter ISO currency code. Possible values are taken from the Windows system.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p>The constants ptString etc. are automatically available to all scripts. The number in parentheses indicates the integer equivalent value.</p>
+<p>&#160;</p>
+<p>This list of properties is called a property set. The script must declare a variable to hold its property set. This property set is an array of property declarations, one per property.</p>
+<p>&#160;</p>
+<p>Each property declaration is an array of 4-7 values as follows:</p>
+<p>&#160;</p>
+<ol type="1">
+<li class="p">
+<p>Property key - used to reference properties</p>
+</li>
+<li class="p">
+<p>Property name - used as a label in the configuration screen</p>
+</li>
+<li class="p">
+<p>Property description - used as a description or tooltip in the config screen</p>
+</li>
+<li class="p">
+<p>Data type - see above</p>
+</li>
+<li class="p">
+<p>Value list (will be displayed in a combobox) - array of values (Only with ptChoice)</p>
+</li>
+<li class="p">
+<p>Pattern (regular expression) used to validate the user's entry while setting the property's value</p>
+</li>
+<li class="p">
+<p>Message which is displayed when the validation check fails</p>
+</li>
+</ol>
+<p>&#160;</p>
+<p>Here is an example property set declaration:</p>
+<p>&#160;</p>
+<p class="Script">Dim aPropertyList</p>
+<p class="Script">aPropertyList = Array( _</p>
+<p class="Script" style="margin-left: 40px;">Array("QIFCurrency", "QIF Currency", _</p>
+<p class="Script" style="margin-left: 80px;">"The ISO currency code assumed for QIF input, e.g. USD, EUR, GBP.", _</p>
+<p class="Script" style="margin-left: 80px;">ptCurrency), _</p>
+<p class="Script" style="margin-left: 40px;">Array("QIFDateFmt", "QIF Date Format", _</p>
+<p class="Script" style="margin-left: 80px;">"The date format in QIF input files.", _</p>
+<p class="Script" style="margin-left: 80px;">ptChoice, Array("DMY", "MDY")) _</p>
+<p class="Script">)</p>
+<p>&#160;</p>
+<h5>Accessing the configuration dialog</h5>
+<p>In order to allow the user to view and change the property values, the script must provide an entry point <span style="font-family: 'Courier New', monospace;">"Configure"</span> which should normally simply look like this:</p>
+<p>&#160;</p>
+<p class="Script">Sub Configure</p>
+<p class="Script" style="margin-left: 40px;">If ShowConfigDialog(ScriptName, aPropertyList) Then</p>
+<p class="Script" style="margin-left: 80px;">SaveProperties ScriptName, aPropertyList</p>
+<p class="Script" style="margin-left: 40px;">End If</p>
+<p class="Script">End Sub</p>
+<p>&#160;</p>
+<p>The use of SaveProperties causes the currently loaded values to be saved to persistent storage - in the file "sprops.ini". The "ScriptName" in the above calls is a value to identify the script uniquely so that different scripts do not unintentionally affect each other's property values.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h5>Loading the property set</h5>
+<p>In Initialise, RecogniseTextFile or LoadTextFile (as required) the property set must be loaded from persistent storage before the saved values can be accessed by means of the following statement:</p>
+<p>&#160;</p>
+<p class="Script">LoadProperties ScriptName, aPropertyList</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<h5>Using the properties</h5>
+<p>Properties can be accessed by using the GetProperty function as follows:</p>
+<p>&#160;</p>
+<p class="Script">sCurrency = Ucase(GetProperty("QIFCurrency"))</p>
+<p class="Script">If Len(sCurrency) &lt;&gt; 3 Then</p>
+<p class="Script" style="margin-left: 40px;">sCurrency = ""</p>
+<p class="Script">End If</p>
+<p class="Script">If sCurrency = "" Then</p>
+<p class="Script" style="margin-left: 40px;">MsgBox "Please set the QIF Currency in the script properties through the Options screen before converting a QIF file.",vbOkOnly,"Unknown currency"</p>
+<p class="Script" style="margin-left: 40px;">Abort</p>
+<p class="Script" style="margin-left: 40px;">LoadTextFile = False</p>
+<p class="Script" style="margin-left: 40px;">Exit Function</p>
+<p class="Script">End If</p>
+<p>&#160;</p>
+<p>Note that in this example the property is checked for a valid value before it is actually used.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

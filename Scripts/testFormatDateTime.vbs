@@ -1,0 +1,1 @@
+MsgBox FormatDateTime(Now(), vbShortDate)

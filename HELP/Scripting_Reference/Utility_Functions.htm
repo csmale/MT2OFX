@@ -1,0 +1,187 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Utility Functions</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="MT2OFX.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=topic-status content="Ready for Review">
+<meta name=topic-priority content=0>
+<meta name=topic-time-estimate content=0>
+<meta name=topic-comment content>
+<meta name=topic-id content>
+<meta name=topic-check-list content="Ran Smart Index">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=1234>
+<meta name=layout-width content=989>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../mt2ofx.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<!--kadov_tag{{<placeholder id="header">}}-->
+<h1><!--kadov_tag{{<variable name=title
+							x-format=default
+							x-value="Utility Functions">}}-->Utility Functions<!--kadov_tag{{</variable>}}--></h1>
+
+<p>The following utility functions and procedures are available from the 
+ scripts. See also <a href="Text_Handling_Functions.htm">Text Handling 
+ Functions</a>.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function MakeGUID() As String</h5>
+
+<p>Returns a GUID (Globally Unique Identifier) - a string which is guaranteed 
+ to be unique. This can be useful for generating StatementIDs if the input 
+ file doesn't contain information to identify the statements uniquely.</p>
+
+<p>&nbsp;</p>
+
+<h5>Sub Message(ToScreen As Boolean, ToFile As Boolean, Text As String, 
+ Title As String)</h5>
+
+<p>Writes a message to the log file and/or to the screen.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function GetConfigString(sSection As String, sKey As String, sDefault 
+ As String) As String</h5>
+
+<p>Returns a value from the configuration file <a href="..\Configuration\INIfile_Reference\MT2OFX.INI.htm">MT2OFX.INI</a>.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function GetConfigStringEx(sSection As String, sKey As String, sDefault 
+ As String, sFile as String) As String</h5>
+
+<p>Returns a value from the configuration file given by <span style="font-weight: bold; font-style: italic;">sFile</span>.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function Version() As String</h5>
+
+<p>Returns a string representing the version number of the MT2OFX application, 
+ e.g. 2.2.127.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function DecimalSeparator() As String</h5>
+
+<p>Returns a string containing the decimal separator character from the 
+ user's regional settings in Windows Control Panel.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function UserCurrency() as String</h5>
+
+<p>Returns a string containing the ISO currency code associated with the 
+ user's chosen locale in Windows Control Panel.</p>
+
+<p>&nbsp;</p>
+
+<h5>Sub Abort()</h5>
+
+<p>Causes script processing to be terminated as soon as possible. For use 
+ in scripts which detect an unrecoverable error.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function CheckVersion()</h5>
+
+<p>Checks the version of Windows Scripting installed on your computer. 
+ If it is V5.6 or newer (required for MT2OFX) then the function returns 
+ True. Otherwise an explanatory message is given and the function returns 
+ False.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function GetScriptEngineInfo()</h5>
+
+<p>Returns a string containing the language, version and build number of 
+ the installed scripting engine. For example: &quot;VBScript Version 5.6.300&quot;.</p>
+
+<p>&nbsp;</p>
+
+<h5>Sub LoadProperties(ScriptName, aPropertyList)</h5>
+
+<p>The property set named &quot;ScriptName&quot; is loaded for this script 
+ from persistent storage. &quot;aPropertyList&quot; describes the <a href="Script_Property_Handling.htm">properties</a>.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function ShowConfigDialog(ScriptName, aPropertyList) As Boolean</h5>
+
+<p>The standard dialog for manipulating <a href="Script_Property_Handling.htm">script 
+ property</a> values is displayed using the currently loaded property set 
+ described by &quot;aPropertyList&quot;. The &quot;ScriptName&quot; is 
+ used only for display purposes in the dialog. Don't forget to load the 
+ property set first!</p>
+
+<p>&nbsp;</p>
+
+<h5>Sub SaveProperties(ScriptName, aPropertyList)</h5>
+
+<p>The currently loaded <a href="Script_Property_Handling.htm">script property</a> 
+ set described by &quot;aPropertyList&quot;, is saved to persistent storage 
+ under <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->&quot;ScriptName&quot;.</p>
+
+<p>&nbsp;</p>
+
+<h5>Function GetProperty(PropertyName) As Variant</h5>
+
+<p>The value of the property &quot;PropertyName&quot; is returned from 
+ the currently loaded <a href="Script_Property_Handling.htm">script property</a> 
+ set.</p>
+
+<p>&nbsp;</p>
+
+<h5><a name=ChooseFromList></a>Function ChooseFromList(sList As Variant, 
+ sDefault As Variant, sTitle As Variant, sHelp As Variant, bFixedList As 
+ Variant) As String</h5>
+
+<p>Displays a dialog to allow the user to select one value from a list. 
+ The values must be provided in sList, separated by &quot;\&quot;. <span 
+ style="font-style: italic;">(From V3.4)</span></p>
+
+<p>&nbsp;</p>
+
+<h5>NODATE</h5>
+
+<p>A constant Date value which represents no valid date, to indicate that 
+ the date is unknown.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<!--kadov_tag{{<placeholder id="footer">}}-->
+</body>
+
+</html>

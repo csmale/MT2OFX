@@ -1,0 +1,7 @@
+TextInput = 0, 0, 0, 0, C
+Locale = 44, 58, 809, 486, C
+Utils = 0, 0, 0, 0, C
+InputFile = 0, 0, 808, 428, C
+Registry = 0, 0, 0, 0, C
+frmScriptWiz = 66, 87, 874, 515, C, 44, 58, 834, 483, C
+ScriptWizUtils = 88, 116, 853, 544, C

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="In Progress" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="Text_Input_Scripts" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Text Input Scripts</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="Text Input Scripts" ?>Text Input Scripts<?rh-variable_end ?></h1>
+<p>Text-based input files in a format other than SWIFT MT940 can be supported by means of a script, written in Microsoft VBScript.</p>
+<p>&#160;</p>
+<p>This script can be constructed using Notepad or any other text editor, although there are specialised programming environments available which may make life easier for some people.</p>
+<p>&#160;</p>
+<p>A sample of a text input script is given below.</p>
+<p>&#160;</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">Option Explicit</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' function Initialise</p>
+<p class="Script">' called once when script is loaded</p>
+<p class="Script" style="font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;">Sub Initialise()</span></p>
+<p class="Script" style="margin-left: 40px;"><a href="Utility_Functions.htm">LogProgress</a> ScriptName, "Initialise"</p>
+<p class="Script" style="margin-left: 80px;">If Not <a href="Utility_Functions.htm">CheckVersion</a>() Then</p>
+<p class="Script" style="margin-left: 80px;"><a href="Utility_Functions.htm">Abort</a></p>
+<p class="Script" style="margin-left: 40px;">End If</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">End Sub</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' function DescriptiveName</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' returns a string with a descriptive name of this script</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">Function DescriptiveName()</p>
+<p class="Script" style="margin-left: 40px;">DescriptiveName = "MyBank Text Format"</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">End Function</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="Script" style="font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;">' function RecogniseTextFile</span></p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' returns True if the input file is recognised by this script</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' returns False if someone else can have a go!</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">Function RecogniseTextFile()</p>
+<p class="Script" style="margin-left: 40px;">Dim sLine</p>
+<p class="Script" style="margin-left: 40px;">RecogniseTextFile = False</p>
+<p class="Script">' read first line from the file</p>
+<p class="Script" style="margin-left: 40px;">sLine = <a href="Text_Handling_Functions.htm#ReadLine">ReadLine</a>()</p>
+<p class="Script">' do whatever checks you consider necessary</p>
+<p class="Script" style="margin-left: 40px;">If Len(sLine) &lt;&gt; 263 Then</p>
+<p class="Script" style="margin-left: 80px;">' MsgBox "Line len: " &amp; CStr(Len(sLine))</p>
+<p class="Script" style="margin-left: 80px;">Exit Function</p>
+<p class="Script" style="margin-left: 40px;">End If</p>
+<p class="Script">' checks passed!</p>
+<p class="Script" style="margin-left: 40px;"><a href="Utility_Functions.htm">LogProgress</a> ScriptName, "File Recognised"</p>
+<p class="Script" style="margin-left: 40px;">RecogniseTextFile = True</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">End Function</p>
+<p class="Script">&#160;</p>
+<p class="Script" style="font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;">' function LoadTextFile</span></p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' returns True if the input file is successfully processed by this script</p>
+<p class="Script" style="font-family: 'Courier New', monospace;">' returns False if something goes wrong</p>
+<p class="Script">Function LoadTextFile()</p>
+<p class="Script" style="margin-left: 40px;">Dim sLine &#160;&#160;&#160;&#160;&#160;&#160;' holds a line</p>
+<p class="Script" style="margin-left: 40px;">Dim sPat &#160;&#160;&#160;&#160;&#160;&#160;&#160;' holds the match pattern</p>
+<p class="Script" style="margin-left: 40px;">Dim vFields &#160;&#160;&#160;&#160;' array of fields in the line</p>
+<p class="Script" style="margin-left: 40px;">Dim sType &#160;&#160;&#160;&#160;&#160;&#160;' record type</p>
+<p class="Script" style="margin-left: 40px;">Dim sAcct &#160;&#160;&#160;&#160;&#160;&#160;' last account number</p>
+<p class="Script" style="margin-left: 40px;">Dim Stmt &#160;&#160;&#160;&#160;&#160;&#160;&#160;' holds the current statement</p>
+<p class="Script" style="margin-left: 40px;">Dim sTmp ' temporary string</p>
+<p class="Script" style="margin-left: 40px;">Dim vDateBits ' parts of date</p>
+<p class="Script" style="margin-left: 40px;">Dim iYear ' year</p>
+<p class="Script" style="margin-left: 40px;">LoadTextFile = False</p>
+<p class="Script" style="margin-left: 40px;">sAcct = ""</p>
+<p class="Script" style="margin-left: 0px;"><span style="margin-left: 40px;">' loop thru the file</span></p>
+<p class="Script" style="margin-left: 40px;">Do While Not <a href="Text_Handling_Functions.htm#AtEOF">AtEOF</a>()</p>
+<p class="Script">' read a line</p>
+<p class="Script" style="margin-left: 80px;">sLine = <a href="Text_Handling_Functions.htm#ReadLine">ReadLine</a>()</p>
+<p class="Script" style="margin-left: 80px;">If Len(sLine) &gt; 0 Then</p>
+<p class="Script">' try to parse the line</p>
+<p class="Script" style="margin-left: 120px;">vFields = <a href="Text_Handling_Functions.htm#ParseLineFixed">ParseLineFixed</a>(sLine, MainPat)</p>
+<p class="Script" style="margin-left: 120px;">If TypeName(vFields) &lt;&gt; "Variant()" Then</p>
+<p class="Script" style="margin-left: 160px;">MsgBox ParseErrorMessage, vbOkOnly+vbCritical, ParseErrorTitle</p>
+<p class="Script" style="margin-left: 160px;">Abort</p>
+<p class="Script" style="margin-left: 120px;">Exit Function</p>
+<p class="Script" style="margin-left: 80px;">End If</p>
+<p class="Script">' start a new statement if the account # changes</p>
+<p class="Script" style="margin-left: 80px;">If sAcct &lt;&gt; vFields(fldRekNr) Then</p>
+<p class="Script" style="margin-left: 120px;">Set Stmt = <a href="Text_Handling_Functions.htm#NewStatement">NewStatement</a>()</p>
+<p class="Script" style="margin-left: 120px;">sAcct = vFields(fldRekNr)</p>
+<p class="Script" style="margin-left: 120px;">Stmt.Acct = Trim(sAcct)</p>
+<p class="Script" style="margin-left: 120px;">Stmt.BankName = "MyBank"</p>
+<p class="Script" style="margin-left: 120px;">Stmt.OpeningBalance.Ccy = vFields(fldValuta)<span style="margin-left: 160px;">Stmt.OpeningBalance.BalDate = <a href="#ParseDate">ParseDate</a>(vFields(fldDatum))</span></p>
+<p class="Script" style="margin-left: 120px;">Stmt.ClosingBalance.Ccy = ""</p>
+<p class="Script" style="margin-left: 160px;">' to force 00000000 as date in ledger balance</p>
+<p class="Script" style="margin-left: 80px;">End If</p>
+<p class="Script">' start filling in the new transaction</p>
+<p class="Script" style="margin-left: 80px;"><a href="Text_Handling_Functions.htm#NewTransaction">NewTransaction</a></p>
+<p class="Script" style="margin-left: 80px;">LastMemo = ""</p>
+<p class="Script" style="margin-left: 80px;">Txn.Amt = CDbl(vFields(fldBedrag)) / 100.0</p>
+<p class="Script" style="margin-left: 80px;">Txn.Payee = vFields(fldNaam)</p>
+<p class="Script" style="margin-left: 80px;"><a href="#ConcatMemo">ConcatMemo</a> Txn.Payee</p>
+<p class="Script" style="margin-left: 80px;">Txn.ValueDate = <a href="#ParseDate">ParseDate</a>(vFields(fldDatum))</p>
+<p class="Script" style="margin-left: 80px;">Txn.BookDate = <a href="#ParseDate">ParseDate</a>(vFields(fldDatum))</p>
+<p class="Script" style="margin-left: 80px;">Stmt.ClosingBalance.BalDate = Txn.ValueDate</p>
+<p class="Script" style="margin-left: 80px;">Txn.IsReversal = False</p>
+<p class="Script" style="margin-left: 80px;">Txn.TxnType = TransType(vFields(fldTransCode), Txn.Amt)</p>
+<p class="Script" style="margin-left: 80px;"><a href="#ConcatMemo">ConcatMemo</a> Trim(vFields(fldOmschrijving1))</p>
+<p class="Script" style="margin-left: 80px;"><a href="#ConcatMemo">ConcatMemo</a> Trim(vFields(fldOmschrijving2))</p>
+<p class="Script">&#160;</p>
+<p class="Script">' sort out a transaction ID - date, sequence are provided!</p>
+<p class="Script" style="margin-left: 80px;">Txn.CheckNum = CStr(Year(Txn.BookDate)) &amp; _</p>
+<p class="Script" style="margin-left: 120px;">Right("0" &amp; CStr(Month(Txn.BookDate)), 2) &amp; _</p>
+<p class="Script" style="margin-left: 120px;">Right("0" &amp; CStr(Day(Txn.BookDate)), 2) &amp; _</p>
+<p class="Script" style="margin-left: 120px;">"." &amp; vFields(fldTransNr)</p>
+<p class="Script" style="margin-left: 40px;">Loop</p>
+<p class="Script" style="margin-left: 40px;">LoadTextFile = True</p>
+<p class="Script">End Function</p>
+<p class="Script">&#160;</p>
+<p class="Script"><a name="ParseDate" id="ParseDate"></a>Function ParseDate(sDate)</p>
+<p class="Script" style="margin-left: 40px;">Dim iYear, iMonth, iDay ' for dates</p>
+<p class="Script" style="margin-left: 40px;">iYear = CInt(Left(sDate,4))</p>
+<p class="Script" style="margin-left: 40px;">iMonth = CInt(Mid(sDate,5,2))</p>
+<p class="Script" style="margin-left: 40px;">iDay = CInt(Mid(sDate,7,2))</p>
+<p class="Script" style="margin-left: 40px;">ParseDate = DateSerial(iYear, iMonth, iDay)</p>
+<p class="Script">End Function</p>
+<p class="Script">&#160;</p>
+<p class="Script"><a name="ConcatMemo" id="ConcatMemo"></a>Sub ConcatMemo(s)</p>
+<p class="Script" style="margin-left: 40px;">If s = "" Then</p>
+<p class="Script" style="margin-left: 80px;">Exit Sub</p>
+<p class="Script" style="margin-left: 40px;">End If</p>
+<p class="Script" style="margin-left: 40px;">If Len(Txn.FurtherInfo) &gt; 0 Then</p>
+<p class="Script" style="margin-left: 80px;">Txn.FurtherInfo = Txn.FurtherInfo &amp; Cfg.MemoDelimiter</p>
+<p class="Script" style="margin-left: 40px;">End If</p>
+<p class="Script" style="margin-left: 40px;">Txn.FurtherInfo = Txn.FurtherInfo &amp; s</p>
+<p class="Script" style="margin-left: 40px;">LastMemo = s</p>
+<p class="Script">End Sub</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

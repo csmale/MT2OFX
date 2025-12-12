@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="In Progress" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="MT940_Matching_Window" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Payee Mapping Window</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="Payee Mapping Window" ?>Payee Mapping Window<?rh-variable_end ?></h1>
+<p>This is where you can configure MT2OFX to translate payee names and assign a Category to the transaction.</p>
+<p>&#160;</p>
+<p>Note that the OFX and OFC file formats do not allow a Category to be specified, so this information will effectively be ignored if you are not using QIF output.</p>
+<p>&#160;</p>
+<p><img src="../frmMapping.JPG" alt="" style="border: none;" width="801" height="457" border="0" /></p>
+<p>&#160;</p>
+<p>For each transaction, the Payee or the Memo field (as defined in the rule) is matched against each pattern in turn, stopping when a match occurs. When a match is detected, the Payee field is replaced (if the replacement is not empty) and the Category is set (if the category string is not empty).</p>
+<p>&#160;</p>
+<p>A transaction which doesn't match any of the patterns, is left unchanged.</p>
+<p>&#160;</p>
+<p>To learn how to construct the patterns which the payee is matched against, refer to the <a href="Regular_Expression_Syntax.htm">Regular Expression Syntax</a> information.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

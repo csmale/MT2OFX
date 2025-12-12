@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="Ready for Review" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="Configuration\_BankRules__Section.htm" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>[BankRules] Section</title>
+<link rel="StyleSheet" href="../../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="[BankRules] Section" ?>[BankRules] Section<?rh-variable_end ?></h1>
+<p>In order to work out which bank issued the input file, we match the initial lines against the patterns in the <span style="font-weight: bold;">[BankRules]</span> section. The rules are checked in order; as soon as a rule matches, that bank is assumed. Checking stops when a rule "Bank#" is not found. If no bank has been identified, the conversion is aborted and a message is given.</p>
+<p>&#160;</p>
+<p>The rules contain 3 fields, separated by commas:</p>
+<p>1) &#160;The bank code used to find the section in this file with the appropriate configuration. By convention the <?rh-glo_start ?>SWIFT<?rh-glo_end ?> <?rh-glo_start ?>BIC<?rh-glo_end ?> (Bank Identifier Code) is used. &#160;</p>
+<p>2) &#160;How many lines at the start of the file are checked before the file is deemed not to match. &#160;</p>
+<p>3) &#160;The pattern, which is used to match against the entire line. Use a * to match any string, or ? to match any single character. &#160;</p>
+<p>&#160;</p>
+<p>When a bank has been determined, the bank code is used to load the <a href="Bank-Specific_Configuration.htm">Bank-Specific Configuration</a>.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Examples:</p>
+<p>[BankRules]</p>
+<p>Bank1=ABNANL2A,1,ABNANL2A</p>
+<p>Bank2=SNSBNL2A,1,{1:F01BBSPNL2A*</p>
+<p>Bank3=FVLBNL22,5,:25:FVLBNL00*</p>
+<p>Bank4=RABONL2U,1,:940:</p>
+<p>Bank5=FTSBNL2R,1,:20:99 9999999999</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

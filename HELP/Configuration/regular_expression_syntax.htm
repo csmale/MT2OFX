@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="In Progress" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="MT940_Matching_Window" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Regular Expression Syntax</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="Regular Expression Syntax" ?>Regular Expression Syntax<?rh-variable_end ?></h1>
+<p>In Payee Mapping the rules are constructed using Regular Expressions. A regular expression is a pattern of text that consists of ordinary characters (for example, letters a through z) and special characters, known as metacharacters. The pattern describes one or more strings to match when searching a body of text. The regular expression serves as a template for matching a character pattern to the string being searched.</p>
+<p>&#160;</p>
+<p>Here are some examples of regular expression you might encounter:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="61.196%">
+<col style="width: 33.751%;" />
+<col style="width: 66.249%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 33.751%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Pattern</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.249%; padding-right: 10px; padding-left: 10px;">
+<p>Matches</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.751%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"^\[ \t]*$"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.249%; padding-right: 10px; padding-left: 10px;">
+<p>Match a blank line.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.751%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"\d{2}-\d{5}"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.249%; padding-right: 10px; padding-left: 10px;">
+<p>Validate an ID number consisting of 2 digits, a hyphen, and another 5 digits.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.751%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"&lt;(.*)&gt;.*&lt;\/\1&gt;"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.249%; padding-right: 10px; padding-left: 10px;">
+<p>Match an HTML tag.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>The following table contains the complete list of metacharacters and their behavior in the context of regular expressions:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+<col style="width: 17.872%;" />
+<col style="width: 82.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Character</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Marks the next character as either a special character, a literal, a backreference, or an octal escape. For example, 'n' matches the character "n". '\n' matches a newline character. The sequence '\\' matches "\" and "\(" matches "(".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">^</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches the position at the beginning of the input string. If the RegExp object's Multiline property is set, ^ also matches the position following '\n' or '\r'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">$</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches the position at the end of the input string. If the RegExp object's Multiline property is set, $ also matches the position preceding '\n' or '\r'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">*</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches the preceding subexpression zero or more times. For example, zo* matches "z" and "zoo". * is equivalent to {0,}.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">+</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches the preceding subexpression one or more times. For example, 'zo+' matches "zo" and "zoo", but not "z". + is equivalent to {1,}.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">?</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches the preceding subexpression zero or one time. For example, "do(es)?" matches the "do" in "do" or "does". ? is equivalent to {0,1}</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">{n}</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>n is a nonnegative integer. Matches exactly n times. For example, 'o{2}' does not match the 'o' in "Bob," but matches the two o's in "food".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">{n,}</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>n is a nonnegative integer. Matches at least n times. For example, 'o{2,}' does not match the "o" in "Bob" and matches all the o's in "foooood". 'o{1,}' is equivalent to 'o+'. 'o{0,}' is equivalent to 'o*'.</p>
+<p>{n,m} m and n are nonnegative integers, where n &lt;= m. Matches at least n and at most m times. For example, "o{1,3}" matches the first three o's in "fooooood". 'o{0,1}' is equivalent to 'o?'. Note that you cannot put a space between the comma and the numbers.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">?</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>When this character immediately follows any of the other quantifiers (*, +, ?, {n}, {n,}, {n,m}), the matching pattern is non-greedy. A non-greedy pattern matches as little of the searched string as possible, whereas the default greedy pattern matches as much of the searched string as possible. For example, in the string "oooo", 'o+?' matches a single "o", while 'o+' matches all 'o's.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches any single character except "\n". To match any character including the '\n', use a pattern such as '[.\n]'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">(pattern)</p>
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches pattern and captures the match. The captured match can be referenced in the replacement string by using '%1' for the first such match, '%2' for the second etc. To match parentheses characters ( ), use '\(' or '\)'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">(?:pattern)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches pattern but does not capture the match, that is, it is a non-capturing match that is not stored for possible later use. This is useful for combining parts of a pattern with the "or" character (|). For example, 'industr(?:y|ies) is a more economical expression than 'industry|industries'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">(?=pattern)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Positive lookahead matches the search string at any point where a string matching pattern begins. This is a non-capturing match, that is, the match is not captured for possible later use. For example 'Windows (?=95|98|NT|2000)' matches "Windows" in "Windows 2000" but not "Windows" in "Windows 3.1". Lookaheads do not consume characters, that is, after a match occurs, the search for the next match begins immediately following the last match, not after the characters that comprised the lookahead.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">(?!pattern)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Negative lookahead matches the search string at any point where a string not matching pattern begins. This is a non-capturing match, that is, the match is not captured for possible later use. For example 'Windows (?!95|98|NT|2000)' matches "Windows" in "Windows 3.1" but does not match "Windows" in "Windows 2000". Lookaheads do not consume characters, that is, after a match occurs, the search for the next match begins immediately following the last match, not after the characters that comprised the lookahead.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">x|y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches either x or y. For example, 'z|food' matches "z" or "food". '(z|f)ood' matches "zood" or "food".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">[xyz]</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>A character set. Matches any one of the enclosed characters. For example, '[abc]' matches the 'a' in "plain".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">[^xyz]</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>A negative character set. Matches any character not enclosed. For example, '[^abc]' matches the 'p' in "plain".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">[a-z]</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>A range of characters. Matches any character in the specified range. For example, '[a-z]' matches any lowercase alphabetic character in the range 'a' through 'z'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">[^a-z]</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>A negative range characters. Matches any character not in the specified range. For example, '[^a-z]' matches any character not in the range 'a' through 'z'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\b</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a word boundary, that is, the position between a word and a space. For example, 'er\b' matches the 'er' in "never" but not the 'er' in "verb".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\B</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a nonword boundary. 'er\B' matches the 'er' in "verb" but not the 'er' in "never".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\cx</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches the control character indicated by x. For example, \cM matches a Control-M or carriage return character. The value of x must be in the range of A-Z or a-z. If not, c is assumed to be a literal 'c' character.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\d</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a digit character. Equivalent to [0-9].</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\D</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a nondigit character. Equivalent to [^0-9].</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\f</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a form-feed character. Equivalent to \x0c and \cL.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\n</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a newline character. Equivalent to \x0a and \cJ.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\r</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a carriage return character. Equivalent to \x0d and \cM.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\s</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches any whitespace character including space, tab, form-feed, etc. Equivalent to [ \f\n\r\t\v].</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\S</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches any non-white space character. Equivalent to [^ \f\n\r\t\v].</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\t</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a tab character. Equivalent to \x09 and \cI.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\v</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches a vertical tab character. Equivalent to \x0b and \cK.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\w</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches any word character including underscore. Equivalent to '[A-Za-z0-9_]'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\W</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches any nonword character. Equivalent to '[^A-Za-z0-9_]'.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\xn</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches n, where n is a hexadecimal escape value. Hexadecimal escape values must be exactly two digits long. For example, '\x41' matches "A". '\x041' is equivalent to '\x04' &amp; "1". Allows ASCII codes to be used in regular expressions.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\num</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches num, where num is a positive integer. A reference back to captured matches. For example, '(.)\1' matches two consecutive identical characters.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\n</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Identifies either an octal escape value or a backreference. If \n is preceded by at least n captured subexpressions, n is a backreference. Otherwise, n is an octal escape value if n is an octal digit (0-7).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\nm</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Identifies either an octal escape value or a backreference. If \nm is preceded by at least nm captured subexpressions, nm is a backreference. If \nm is preceded by at least n captures, n is a backreference followed by literal m. If neither of the preceding conditions exists, \nm matches octal escape value nm when n and m are octal digits (0-7).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\nml</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches octal escape value nml when n is an octal digit (0-3) and m and l are octal digits (0-7).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.872%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">\un</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.128%; padding-right: 10px; padding-left: 10px;">
+<p>Matches n, where n is a Unicode character expressed as four hexadecimal digits. For example, \u00A9 matches the copyright symbol (©).</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

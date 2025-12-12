@@ -1,0 +1,57 @@
+﻿[Target:Printed Documentation]
+SSLayoutType=7
+[Target:XML Output]
+SSLayoutType=8129
+[Target:FlashHelp]
+SSLayoutType=2
+[Target:Microsoft HTML Help]
+SSLayoutType=1
+ActionID For Generation=1001
+ResultFileName=mt2ofx.chm
+Remove Folder with prompt=1
+CreateProjectTime=
+CreateProjectUser=
+SupportMas_MPJ=1
+ViewFileName=mt2ofx.chm
+ResultStatus=0
+BuildTimeHi=30027554
+BuildTimeLow=1237898516
+[Target:Oracle Help]
+SSLayoutType=16
+[Target:JavaHelp]
+SSLayoutType=1
+[Target:WebHelp Pro]
+SSLayoutType=32
+[Target:WebHelp]
+SSLayoutType=2
+[Target:FlashHelp Pro]
+SSLayoutType=2
+[Target:WebHelp Enterprise]
+SSLayoutType=32
+[PreSingleSource]
+Html Help Project=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.hhp
+Table Of Content=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.hhc
+Index=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.hhk
+Topic Index=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\RHTopicKeyword$.hhk
+See Also Index=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.hha
+Browse Sequence=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.brs
+Glossary=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.glo
+Topic Properties=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trs
+Active Folders=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trf
+Baggage Files=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trb
+Skin List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trk
+Active Layout Names=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trl
+Template Files=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trt
+Project TOC List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trtocl
+Project Index List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.tridxl
+Project Glossary List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trglol
+Project CSS List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trcss
+Project Variable Set List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.trvset
+Default Topic=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\About_MT2OFX.htm
+Build Tags0=15030;Online | Print
+Build Tags=
+Build Expression=
+Language ID=1033
+Language Name=en_US
+Language=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\RoboHHRE.lng
+Stop List=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\HELP\mt2ofx.stp

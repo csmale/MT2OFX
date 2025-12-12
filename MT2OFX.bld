@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project version='7' encrypted='1'>
+	<steps type='0'>
+		<step action='Group'>
+			<name>Project steps</name>
+		</step>
+		<step action='Set Macro'>
+			<MacroEnvVar type='11'>-1</MacroEnvVar>
+			<MacroName>BLDDIR</MacroName>
+			<MacroType type='3'>1</MacroType>
+			<MacroValue>%PROJDIR%\Build</MacroValue>
+			<indent type='3'>1</indent>
+			<name>Set Build Directory</name>
+		</step>
+		<step action='Create Folder'>
+			<Path>%BLDDIR%</Path>
+			<description>create build directory</description>
+			<indent type='3'>1</indent>
+			<name>Create Folder</name>
+		</step>
+		<step action='Delete Files'>
+			<DelDirs type='11'>-1</DelDirs>
+			<Ext>*.*</Ext>
+			<LogDel type='11'>-1</LogDel>
+			<Path>%BLDDIR%</Path>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Empty Build Directory</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%/res</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project>%VSS_PROJECT%/res/*.lng</Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>1</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Language Files (SS)</name>
+		</step>
+		<step action='Copy Files'>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%\res</DestDir>
+			<Ext>*.lng</Ext>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%\res</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Language Files</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project><![CDATA[%VSS_PROJECT%/scriptcat.xml
+%VSS_PROJECT%/MT2OFX.vbs
+%VSS_PROJECT%/MT2OFX.chm
+%VSS_PROJECT%/readme.txt
+%VSS_PROJECT%/MT2OFX.ini]]></Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>1</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Other Base Files (SS)</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%</DestDir>
+			<Ext><![CDATA[scriptcat.xml
+MT2OFX.vbs
+readme.txt
+MT2OFX.chm]]></Ext>
+			<HideOn type='11'>-1</HideOn>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%</SourceDir>
+			<SysOn type='11'>-1</SysOn>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Other Base Files</name>
+		</step>
+		<step action='Copy Files'>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%\Redist</DestDir>
+			<Ext>*.*</Ext>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%\Redist</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Redistributable Files</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%\Redist</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project>%VSS_PROJECT%/Redist/*.*</Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>1</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Redistributable Files (SS)</name>
+		</step>
+		<step action='Copy Files'>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%</DestDir>
+			<Ext>MT2OFX.ini</Ext>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%\Setup</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Local INI File</name>
+		</step>
+		<step action='Group'>
+			<name>Main Executable</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%/src</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project><![CDATA[%VSS_PROJECT%/MT2OFX.vbp
+%VSS_PROJECT%/MT2OFX.ini
+%VSS_PROJECT%/*.bas
+%VSS_PROJECT%/*.cls
+%VSS_PROJECT%/*.ctl
+%VSS_PROJECT%/*.frm
+%VSS_PROJECT%/*.frx
+%VSS_PROJECT%/*.bmp
+]]></Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>0</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Source Files (SS)</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%\src</DestDir>
+			<Ext><![CDATA[MT2OFX.vbp
+MT2OFX.ini
+*.bas
+*.cls
+*.ctl
+*.frm
+*.frx
+*.bmp]]></Ext>
+			<HideOn type='11'>-1</HideOn>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%</SourceDir>
+			<SysOn type='11'>-1</SysOn>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Source Files</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%\src\Help</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project>%VSS_PROJECT%/Help/BSSCDefault.bas</Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>0</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Help Integration Source Files (SS)</name>
+		</step>
+		<step action='Copy Files'>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%\src\Help</DestDir>
+			<Ext>BSSCDefault.bas</Ext>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%\Help</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Help Integration Source Files</name>
+		</step>
+		<step action='Run Program'>
+			<command>%LOCALSOURCE%\LangToRc.exe res\english.lng src\mt2ofx.rc</command>
+			<indent type='3'>1</indent>
+			<name>Make Resource File</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%BLDDIR%</startin>
+			<successcodes>0</successcodes>
+		</step>
+		<step action='Run Program'>
+			<command>%RC_PATH% /r MT2OFX.rc</command>
+			<indent type='3'>1</indent>
+			<name>Compile Resources</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%BLDDIR%\src</startin>
+		</step>
+		<step action='Make VB6'>
+			<Attr type='11'>-1</Attr>
+			<Filename>%BLDDIR%\src\MT2OFX.vbp</Filename>
+			<Force type='11'>-1</Force>
+			<IncrReason type='11'>0</IncrReason>
+			<ShowCmd type='11'>-1</ShowCmd>
+			<TargDir>%BLDDIR%</TargDir>
+			<command></command>
+			<indent type='3'>1</indent>
+			<name>Make Main Executable</name>
+		</step>
+		<step action='VS6 Get Version'>
+			<Filename>%BLDDIR%\src\MT2OFX.vbp</Filename>
+			<indent type='3'>1</indent>
+			<name>VS6 Get Version</name>
+		</step>
+		<step action='Group'>
+			<name>HTMLClip Executable</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%\HtmlClip</DestDir>
+			<Ext><![CDATA[*.vbp
+*.frm
+*.bas
+*.cls]]></Ext>
+			<HideOn type='11'>-1</HideOn>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>U:\My Projects\HtmlClip</SourceDir>
+			<SysOn type='11'>-1</SysOn>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Source Files</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%\HtmlClip</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project><![CDATA[%VSS_HTMLCLIP%/*.vbp
+%VSS_HTMLCLIP%/*.frm
+%VSS_HTMLCLIP%/*.bas]]></Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>0</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Source Files (SS)</name>
+		</step>
+		<step action='Make VB6'>
+			<Attr type='11'>-1</Attr>
+			<Filename>%BLDDIR%\HtmlClip\HtmlClip.vbp</Filename>
+			<IncrReason type='11'>-1</IncrReason>
+			<TargDir>%BLDDIR%</TargDir>
+			<command></command>
+			<indent type='3'>1</indent>
+			<name>Make HtmlClip</name>
+		</step>
+		<step action='Group'>
+			<name>Package</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%\Package</DestDir>
+			<Ext><![CDATA[MT2OFX.iss
+MakeInstaller.vbs
+MakeInstaller.cmd]]></Ext>
+			<HideOn type='11'>-1</HideOn>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%\InnoSetup</SourceDir>
+			<SysOn type='11'>-1</SysOn>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Installer Script</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%\Package</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project>%VSS_PROJECT%/InnoSetup/*</Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>0</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Installer Script (SS)</name>
+		</step>
+		<step action='Batch File'>
+			<CmdFile>%BLDDIR%\Package\MakeInstaller.cmd</CmdFile>
+			<CmdType type='3'>0</CmdType>
+			<NoEcho type='11'>-1</NoEcho>
+			<indent type='3'>1</indent>
+			<name>Fix Installer Script</name>
+			<startin>%BLDDIR%\Package</startin>
+			<window type='11'>-1</window>
+		</step>
+		<step action='Copy Files'>
+			<Delay>15</Delay>
+			<DestDir>%BLDDIR%</DestDir>
+			<ExclExt>MT2OFX.vbs</ExclExt>
+			<Ext>*.vbs</Ext>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%LOCALSOURCE%</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<condcomparison type='3'>6</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Scripts</name>
+		</step>
+		<step action='SourceSafe'>
+			<AutoLocate type='11'>-1</AutoLocate>
+			<CompareOpt type='3'>2</CompareOpt>
+			<Database>%VSS_DB%</Database>
+			<LocalPath>%BLDDIR%</LocalPath>
+			<LongFilenames type='11'>-1</LongFilenames>
+			<Operation>Get</Operation>
+			<Password encrypted='1'>WM37PNQ8UeGXaoS4mKHbg3b9</Password>
+			<Project>%VSS_PROJECT%/*.vbs</Project>
+			<PromptOff type='11'>-1</PromptOff>
+			<Recurse type='11'>0</Recurse>
+			<ShowFilesOnly type='11'>-1</ShowFilesOnly>
+			<TimeOpt type='3'>1</TimeOpt>
+			<Username>%VSS_USER%</Username>
+			<WriteOpt type='3'>0</WriteOpt>
+			<command></command>
+			<condcomparison type='3'>7</condcomparison>
+			<condexpr>%LOCALBUILD%</condexpr>
+			<indent type='3'>1</indent>
+			<name>Get Scripts (SS)</name>
+		</step>
+		<step action='Inno Setup'>
+			<Exe>C:\Program Files\Inno Setup 5\ISCC.exe</Exe>
+			<Filename>%BLDDIR%\Package\mt2ofx_new.iss</Filename>
+			<ISPPCompat type='11'>-1</ISPPCompat>
+			<OutputDir>%BLDDIR%\Package</OutputDir>
+			<indent type='3'>1</indent>
+			<name>Make Package</name>
+		</step></steps>
+	<macros>
+		<macro name='BLDDIR'>
+			<envvar type='11'>-1</envvar>
+			<value>U:\My Projects\MT2OFX\Build</value>
+		</macro>
+		<macro name='LOCALBUILD'>
+			<envvar type='11'>-1</envvar>
+			<value>true</value>
+		</macro>
+		<macro name='LOCALSOURCE'>
+			<value>U:\My Projects\MT2OFX</value>
+		</macro>
+		<macro name='VSS_DB'>
+			<value>\\monster\vss60</value>
+		</macro>
+		<macro name='VSS_HTMLCLIP'>
+			<value>$/HtmlClip</value>
+		</macro>
+		<macro name='VSS_PROJECT'>
+			<value>$/MT2OFX</value>
+		</macro>
+		<macro name='VSS_PWD'>
+			<value>speak1x</value>
+		</macro>
+		<macro name='VSS_USER'>
+			<value>colin</value>
+		</macro></macros>
+</project>

@@ -1,0 +1,10 @@
+*.frx
+*.zip
+*.rar
+_2/
+CustomOutput/
+*.log
+LangToRc/
+save/
+Build/
+*.txt

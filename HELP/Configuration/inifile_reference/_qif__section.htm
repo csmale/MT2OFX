@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="_QIF__Section" />
+<meta name="topic-status" content="Ready for Review" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>[QIF] Section</title>
+<link rel="StyleSheet" href="../../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="[QIF] Section" ?>[QIF] Section<?rh-variable_end ?></h1>
+<p>In this section specific details of the programs behaviour during production of QIF files can be configured.</p>
+<p>&#160;</p>
+<h5><a name="DateFormat" id="DateFormat"></a>DateFormat</h5>
+<p>Represents the format of dates in the QIF output. Some programs require US-format dates, others require European dates or are more flexible. Allowed values are:</p>
+<p>&#160;</p>
+<p>0=mm/dd/yyyy - US format</p>
+<p>1=dd/mm/yyyy - European format</p>
+<p>2=yyyy/mm/dd - International Standard format</p>
+<p>3=as defined in the Regional Settings in Windows Control Panel (default).</p>
+<p>&#160;</p>
+<h5><a name="DecimalSeparator" id="DecimalSeparator"></a>DecimalSeparator</h5>
+<p>Defines the character which is used as the decimal separator in amounts output in a QIF file. Typical values are "." (123.45), "," (123,45) or "". If the value is empty or missing, the setting is taken from the Regional Settings in Windows Control Panel (default).</p>
+<p>&#160;</p>
+<h5><a name="NoAccountHeader" id="NoAccountHeader"></a>NoAccountHeader</h5>
+<p>Indicates whether the output QIF file is to contain a header section describing the account to which the subsequent transactions apply. If the value is "0" or omitted, then an account header is produced; otherwise no account header is produced.</p>
+<p>&#160;</p>
+<p>The account header looks like the following example:</p>
+<p class="Script" style="margin-left: 40px;">!Account</p>
+<p class="Script" style="margin-left: 40px;">N&lt;account number&gt;</p>
+<p class="Script" style="margin-left: 40px;">T&lt;account type&gt;</p>
+<p class="Script" style="margin-left: 40px;">DOFX online account</p>
+<p class="Script" style="margin-left: 40px;">/&lt;closing balance date&gt;</p>
+<p class="Script" style="margin-left: 40px;">$&lt;closing balance amount&gt;</p>
+<p class="Script" style="margin-left: 40px;">^</p>
+<p>&#160;</p>
+<p>The lines referring to the closing balance are omitted if the closing balance is not available.</p>
+<p>&#160;</p>
+<p>Microsoft Money, and possibly other software, objects to the account header. Hence a facility has been provided to disable the header when required.</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

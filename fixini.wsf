@@ -1,0 +1,614 @@
+<?XML version="1.0" standalone="yes" ?>
+<job id="IncludeExample">
+   <script language="VBScript">
+   <![CDATA[
+' script to examine MT2OFX.INI files
+Option Explicit
+
+Dim sTitle: sTitle = "MT2OFX INI File Troubleshooter"
+Const iMinLength = 10000
+Dim oShell: Set oShell=CreateObject("Shell.Application")
+Dim sAppData: sAppData = oShell.Namespace(26).Self.Path
+Dim sProgFiles: sProgFiles = oShell.Namespace(38).Self.Path
+Dim sAppDataIni: sAppDataIni = sAppData & "\MT2OFX\MT2OFX.INI"
+Dim sProgFilesIni: sProgFilesIni = sProgFiles & "\MT2OFX\MT2OFX.INI"
+Dim sIniContents
+
+Dim fso: Set fso = CreateObject("Scripting.FileSystemObject")
+Dim f1, f2
+
+If fso.FileExists(sAppDataIni) Then
+	Set f1 = fso.GetFile(sAppDataIni)
+Else
+	Set f1 = Nothing
+End If
+If fso.FileExists(sProgFilesIni) Then
+	Set f2 = fso.GetFile(sProgFilesIni)
+Else
+	Set f2 = Nothing
+End If
+
+Dim fActive, fOther
+
+If f1 Is Nothing Then
+	If f2 Is Nothing Then
+		MsgBox "No MT2OFX ini-files found. Is it installed?",,sTitle
+	Else
+		Set fOther = f1
+		Set fActive = f2
+	End If
+Else
+	Set fActive = f1
+	Set fOther = f2
+End If
+
+sIniContents = GetResource("BaseIniFile")
+MsgBox sIniContents,,"Base Ini File"
+
+MsgBox "Active ini file at: " & fActive.Path & ", " & CStr(fActive.Size) & " bytes, " & FormatDateTime(fActive.DateLastModified, 0),,sTitle
+
+If fActive.Size < iMinLength Then
+	If fOther Is Nothing Then
+		MsgBox "Active ini file seems too small."
+	Else
+		If fOther.Size < iMinLength Then
+			MsgBox "Active ini file seems too small. There is also a file at " & fOther.Path & " which is also too small.",,sTitle
+		Else
+			MsgBox "Active ini file seems too small. There is also a file at " & fOther.Path & " which does not seem too small.",,sTitle
+		End If
+	End If
+Else
+	MsgBox "Active ini file is OK.",,sTitle
+End If
+]]>
+   </script>
+   <resource id="BaseIniFile"><![CDATA[# Configuration file for MT2OFX
+# $Header: /MT2OFX/Setup/mt2ofx.ini 3     6/12/08 23:22 Colin $
+[General]
+MemoDelimiter=;
+OutputFileType=OFX
+StartImportAfterConversion=1
+ApplicationHomePage=http://www.xs4all.nl/~csmale/mt2ofx/
+UseOldFITID=0
+
+PromptForOutput=1
+# PromptForOutput: 1=Ask for output file name, 0=Don't ask (default)
+
+CompressSpaces=1
+# CompressSpaces: 1=Compress multiple spaces in payee and memo, 0=Do not compress spaces (default)
+
+PayeeCase=3
+# PayeeCase: 0=No Change (default), 1=Upper Case, 2=Lower Case, 3=Proper Case
+
+AutoBrowse=0
+# AutoBrowse: 0=Standard (default), 1=Does a "Browse" on opening
+
+BookDateMode=0
+# BookDateMode: 0=Book Date (Standard, default), 1=Value Date,
+# 2=Transaction Date (if available, else Book Date)
+
+#ScriptDebugLevel=0
+# ScriptDebugLevel: passed through to scripts. e.g. 0=no debugging, 9=max debugging.
+# other (integer) values can be passed - they are only used in the scripts.
+
+# LCID: locale ID, used to set the language. To force Dutch, use LCID=&H413.
+# If no value is given or if it is not recognised, the program attempts to use the same
+# language as the Windows installation. Currently only English and Dutch are implemented.
+#LCID=&H413
+
+# TxnDumpFile: File to which a dump is written of all statements and transaction data by passing
+# the value to the DumpObjects() function called from the processing script.
+TxnDumpFile=
+
+# File to which a simple log is written. Default is no logging. If a relative path (or no path)
+# is specified, the file is relative to the application directory.
+LogFile=log.txt
+
+# ScriptEditor: full path to program used to edit VBS script files
+ScriptEditor=notepad.exe
+
+# AutoText: list of extensions, comma-separated, which are assumed to be text files and will
+# always passed around the text input scripts for auto-recognition (unless the extension  is
+# directly mapped)
+AutoText=ASC,CSV,TXT,QIF,OFC,OFX
+
+# AutoMT940: list of extensions, comma-separated, which are assumed to be MT940 files and not
+# passed around the text input scripts for auto-recognition
+AutoMT940=940,SWI,STA,MT,MT940
+
+# Number of milliseconds to allow for a script function to complete. If the value -1
+# is specified, no timeout is used. When the value is 0, the timeout occurs as soon
+# as it is determined that a running script is hung for any reason. Default is 5000
+# (equivalent to 5 seconds).
+ScriptTimeout=5000
+
+# LastInputExtension: extension of last selected input file. Used to pre-select the filter in the
+# Open dialog for the input file.
+LastInputExtension=
+
+# LastInputDirectory: directory containing last selected input file. Used to pre-select the directory
+# in the Open dialog for the input file.
+LastInputDirectory=
+
+# PayeeMapFile: file containing payee mapping information
+PayeeMapFile=PayeeMap.dat
+
+# PayeeMapIgnoreCase: When the value is non-zero, the pattern matching for Payee Mapping
+# is case insensitive. Default = 0 (case-sensitive).
+PayeeMapIgnoreCase=1
+
+# EnableSounds: If the value is non-zero, a sound is used with each message box in
+# accordance with Windows standards. Default=0.
+EnableSounds=0
+
+# TestPayee/TestMemo: These are the strings used for testing payee matching rules.
+TestPayee=
+TestMemo=
+
+# DefaultPayee: When the script produces no payee name, this value is used to ensure
+# the OFX/OFC output file is valid.
+DefaultPayee=*** Unknown ***
+
+# GenerateCheckNum: When the value is non-zero, the program will generate a cheque number
+# if none is produced by the script. When the value is zero, empty cheque numbers will not
+# be included in the output file. Default=0.
+GenerateCheckNum=0
+
+# OFXVersion: set the version of OFX produced. Valid values are 102, 151, 160, 201, 202. Default is 102.
+OFXVersion=102
+
+# OFXDecimal: set the decimal point character for OFX output. Valid values are . (point) and , (comma).
+# Default is ".".
+OFXDecimal=.
+
+# SaveClipOutput: if non-zero, you are prompted to save the output of a conversion of
+# data from the Windows clipboard. If zero, the converted data is written to a temporary
+# file and deleted after use. Default: 0
+SaveClipOutput=0
+
+# ResFile: name of the file in the "res" subdirectory containing the localised strings for the selected language
+# If the value is empty, or if the file is not found, the program uses its internal English strings.
+ResFile=english.lng
+
+# SupportLogFileLines: how many lines from the log file are listed in the support log file.
+SupportLogFileLines=20
+
+# ExportTo: export actions for the conversion result. The number means: 0=no action, 1=windows default action,
+# 2=use named program. Default is 1 in all cases.
+OFXExportTo=
+OFCExportTo=
+QIFExportTo=
+QFXExportTo=
+
+# QIF Output Configuration section
+[QIF]
+# DateFormat - gives format string for dates in output file.
+# 0=MM/DD/YYYY, 1=DD/MM/YYYY, 2=YYYY/MM/DD, 3=system setting (from regional settings)
+DateFormat=3
+
+# DecimalSeparator - decimal separator character. can be ".", "," or empty (use system setting)
+DecimalSeparator=
+
+# NoAccountHeader: If nonzero, no !Account header will be output to the
+# QIF output file. MS Money doesn't like this header...
+NoAccountHeader=0
+
+# MaxMemoLength - if non-zero, memo fields in QIF output files will be TRUNCATED at this length. Quicken 2001 NL is
+# known to have a problem with longer memo fields, whereby the amount will get overwritten if what comes after position
+# 54 is numeric.
+MaxMemoLength=0
+CustomDateFormat=
+
+[AccountTypes]
+Default=CHECKING
+#123456789=CHECKING
+# Account types: must be one of CHECKING, CREDITLINE, SAVINGS, MONEYMRKT
+
+# SpecialPayeeNames is only used for ABN AMRO and will be replaced
+# soon by functionality in the processing script!
+[SpecialPayeeNames]
+Pattern1=GELDAUTOMAAT
+Payee1=Cash Withdrawal
+Pattern2=CHIPKNIP
+Payee2=Electronic Purse
+Pattern3=ELECTRONIC BANKING
+Payee3=Bank
+Pattern4=KOSTEN
+Payee4=Bank
+Pattern5=(JAAR)KOSTEN
+Payee5=Bank
+Pattern6=AFSLUITING PER
+Payee6=Interest
+Pattern7=RENTEAFSLUITING
+Payee7=Interest
+Pattern8=GEA
+Payee8=Cash Withdrawal
+Pattern9=CHIP
+Payee9=Electronic Purse
+
+# text handling stuff
+# list known text input scripts
+[Text]
+Script1=1,Generic-QIF.vbs
+Script2=1,Generic-OFC.vbs
+Script3=1,Generic-OFX.vbs
+Script4=1,SNSBank-Csv.vbs
+Script5=1,Rabo-MutAsc.vbs
+Script6=1,Postbank-AscCSV.vbs
+Script7=1,Postbank-MijnPostbankCSV.vbs
+Script8=1,ArgentaNL-TSV.vbs
+Script9=1,ING-CSV.vbs
+Script10=1,ING-Asc.vbs
+Script11=1,VisaNL.vbs
+Script12=1,BankAustria-CSV.vbs
+Script13=1,KBCOnline-CSV.vbs
+Script14=1,SocGen2-CSV.vbs
+Script15=1,AxaBE-CSV.vbs
+Script16=1,DexiaBE-CSV.vbs
+Script17=1,MoneyXMLReport.vbs
+Script18=1,2checkout-CSV.vbs
+Script19=1,ArgentaBE-CSV.vbs
+Script20=1,AxaFR-Web.vbs
+Script21=1,BankOfAsia-CSV.vbs
+Script22=1,BanqueCantonaleVaudoiseCH-XLS.vbs
+Script23=1,Barclaycard-CSV.vbs
+Script24=1,BaselerKantonalbank-KTO.vbs
+Script25=1,CitibankCA-Web.vbs
+Script26=1,CL-OFX.vbs
+Script27=1,DanskeBank-CSV.vbs
+Script28=1,eGold-CSV.vbs
+Script29=1,HoaresUK-CSV.vbs
+Script30=1,La Poste-TSV.vbs
+Script31=1,Rabo-CSV.vbs
+Script32=1,SocGen-CSV.vbs
+Script33=1,SocGenCC-CSV.vbs
+Script34=1,VolksbankDE-CSV.vbs
+Script35=1,BankOfScotlandUK-CSV.vbs
+Script36=1,DSBBankSG-CSV.vbs
+Script37=1,SmileUK-WEB.vbs
+Script38=1,DnBNOR-CSV.vbs
+Script39=1,BarclaysCI-CSV.vbs
+Script40=1,PskAT-CSV.vbs
+Script41=1,HsbcCA-CSV.vbs
+
+# map file extensions to input scripts for automatic processing
+[TextExtensions]
+QIF=Generic-QIF.vbs
+OFC=Generic-OFC.vbs
+OFX=Generic-OFX.vbs
+
+# to work out the bank, we match the initial lines against the patterns in the following rules.
+# the rules are checked in order. as soon as a rule matches, that bank is assumed. Checking stops when
+# a rule "Bank#" is not found. If no bank has been identified, the conversion is aborted and a message is given.
+# The rules contain 3 fields, separated by commas.
+# 1) bank code used to find the section in this file with the appropriate configuration
+# 2) how many lines at the start of the file are checked
+# 3) the pattern, which is used to match against the entire line. Use
+# a * to match any string, or ? to match any single character.
+[BankRules]
+Bank1=ABNANL2A,1,ABNANL2A
+Bank2=SNSBNL2A,1,{1:F01BBSPNL2A*
+Bank3=FVLBNL22,5,:25:FVLBNL00*
+Bank4=RABONL2U,1,:940:
+Bank5=FTSBNL2R,1,:20:99 9999999999
+Bank6=SNSBNL2A,1,{1:F01SNSBNL2A*
+Bank7=RAIFCH22,3,:25:00080673/*
+Bank8=COOPCHBB,3,:25:00008452/*
+Bank9=PSTBNL21,1,0000 01PSTBNL21XXXX00001*
+Bank10=ABNANL2A,1,{1:F01ABNANL2A*
+Bank11=RBABCH22,5,:25:00006866/*
+Bank12=CRESCH22,2,{CRESCHZZ45R
+Bank13=LUKBCH22,5,:25:  01000332*
+Bank14=TRIONL21,3,:25:TRIODOSBANK/*
+Bank15=ZKBKCHZZ,6,23Privatkonto
+Bank16=BYLADEM1ALG,3,:25:73350000/*
+Bank17=INGBNL2A,1,*INGBNL2A*
+
+# bank variant configuration. The section name must be equal to the bank name, which is matched
+# against the rules given above. If an exact section name
+# match is not found, the default is used which is defined under "[*]".
+# BankName: String (not currently used)
+# Structured86: 1=the :86: record is structured as described in the
+#            SWIFT standard, otherwise it is unstructured
+# FindPayee: The name of the internal function used to extract the
+#            payee name from the description in :86:
+# FindTxnDate: The name of the internal function used to extract the
+#            transaction date from the description in :86:
+# FindServerTime: The name of the internal function used to derive the
+#            server timestamp from the file
+# IntuitBankID: The identifier given to the bank by Intuit if the bank
+#	     has signed up to support Quicken. There are rumours that
+#            Quicken will not import an OFX file unless the <INTU.BID>
+#            field is present and correct!
+# ScriptFile: The name of the file containing VBScript code used to postprocess
+#            the transaction. If present, this code is used INSTEAD of the internal
+#            functions mentioned above. For details of the scripting capabilities
+#            see the Help information in mt2ofx.chm.
+# SkipEmptyMemoFields: 1=Empty fields in the :86: data are ignored, thus avoiding
+#            consecutive, leading and/or trailing delimiters in the output.
+
+[*]
+BankName=Default
+Structured86=0
+
+[ABNANL2A]
+BankName=ABN Amro
+Structured86=0
+ScriptFile=ABN Amro.vbs
+SkipEmptyMemoFields=0
+[SNSBNL2A]
+BankName=SNS Bank
+Structured86=0
+SkipEmptyMemoFields=1
+ScriptFile=SNS Bank.vbs
+[FVLBNL22]
+BankName=Van Lanschot Bankiers
+Structured86=1
+SkipEmptyMemoFields=1
+ScriptFile=Van Lanschot.vbs
+[RABONL2U]
+BankName=Rabobank
+Structured86=0
+[FTSBNL2R]
+BankName=Fortis Bank Nederland
+Structured86=1
+SkipEmptyMemoFields=1
+ScriptFile=Fortis.vbs
+[PSTBNL21]
+BankName=Postbank (NL)
+SkipEmptyMemoFields=1
+ScriptFile=Postbank.vbs
+[LUKBCH22]
+BankName=Luzerner Kantonalbank
+SkipEmptyMemoFields=1
+ScriptFile=Luzerner.vbs
+[RAIFCH22]
+BankName=Raiffeisenbank (CH)
+Structured86=0
+SkipEmptyMemoFields=0
+ScriptFile=RaiffeisenbankZurich.vbs
+[COOPCHBB]
+BankName=Coop Bank Switzerland
+Structured86=1
+SkipEmptyMemoFields=0
+ScriptFile=CoopCH.vbs
+[CRESCH22]
+BankName=Credit Suisse
+Structured86=0
+SkipEmptyMemoFields=0
+ScriptFile=Credit Suisse.vbs
+[CRESCHZZ]
+BankName=Credit Suisse
+Structured86=0
+SkipEmptyMemoFields=0
+ScriptFile=Credit Suisse.vbs
+[RBABCH22]
+BankName=Spar & Leihkasse
+Structured86=1
+SkipEmptyMemoFields=0
+ScriptFile=SparUndLeihkasse.vbs
+[COOPCHBB]
+BankName=Coop Bank Switzerland
+Structured86=1
+SkipEmptyMemoFields=0
+ScriptFile=CoopCH.vbs
+[RAIFCH22]
+BankName=Raiffeisenbank (CH)
+Structured86=0
+SkipEmptyMemoFields=0
+ScriptFile=RaiffeisenbankZurich.vbs
+[BKBBCHBB]
+BankName=Basler Kantonalbank
+Structured86=1
+SkipEmptyMemoFields=1
+ScriptFile=BaslerKantonalbank.vbs
+[MPXXNLXX]
+BankName=MeesPierson
+Structured86=0
+SkipEmptyMemoFields=0
+ScriptFile=MeesPierson.vbs
+[TRIONL21]
+BankName=Triodos Bank NV (NL)
+Structured86=1
+SkipEmptyMemoFields=0
+ScriptFile=TriodosNL-MT940.vbs
+
+[ZKBKCHZZ]
+BankName=Zuercher Kantonalbank (CH)
+Structure86=0
+SkipEmptyMemoFields=0
+ScriptFile=ZuercherKantonalBankCH-MT940.vbs
+
+[BYLADEM1ALG]
+BankName=Sparkasse Allgaeu
+Structured86=1
+SkipEmptyMemoFields=1
+ScriptFile=SparkasseAllgaeu.vbs
+
+[INGBNL2A]
+BankName=ING Bank NL
+Structured86=0
+SkipEmptyMemoFields=1
+ScriptFile=INGNL-MT940.vbs
+
+# if two values are given separated by a comma, the first value is used if the transaction amount is
+# greater than or equal to zero and the second value is used if the value is less than zero.
+[TxnTypeMap]
+# these are for Van Lanschot
+011=DEP
+012=PAYMENT
+075=INT
+106=PAYMENT
+
+# these are for ABN AMRO
+N030=DEP,PAYMENT
+N165=DIRECTDEBIT
+N191=DIRECTDEBIT
+N192=DIRECTDEBIT
+N196=DEP
+N197=DIRECTDEBIT
+N361=ATM
+N411=DEP,PAYMENT
+N422=DEP,PAYMENT
+N426=POS
+N427=PAYMENT
+N442=ATM
+N445=ATM
+N446=ATM
+N456=SRVCHG
+N485=DEP,PAYMENT
+N506=SRVCHG
+M591=INT
+N595=INT
+N591=OTHER
+
+# these are standard Swift codes
+NBOE=OTHER
+NBRF=OTHER
+NCHG=SRVCHG
+NCHK=OTHER
+NCLR=OTHER
+NCOL=OTHER
+NCOM=OTHER
+NDCR=OTHER
+' NDIV=OTHER
+NECK=OTHER
+NEQA=OTHER
+NFEX=OTHER
+NINT=INT
+NLBX=OTHER
+NLDP=OTHER
+NMSC=OTHER
+NRTI=OTHER
+NSEC=OTHER
+NSTO=OTHER
+NTCK=OTHER
+NTRF=OTHER
+NVDA=OTHER
+
+# these are for SNS
+NBEA=POS
+NGEA=ATM
+NINC=DEP,PAYMENT
+NOVB=DEP,PAYMENT
+NKST=SRVCHG
+NDIV=DEP,PAYMENT
+NACC=PAYMENT
+NCHP=ATM
+NIOB=DEP,PAYMENT
+
+# this is for Fortis
+N000=DEP,PAYMENT
+
+# these are for Postbank. Postbank uses a three-char code instead of four,
+# which is non-standard!! This is sorted out in "Postbank.VBS"
+NAC=OTHER
+NBA=ATM
+NCH=CHECK
+NDV=SRVCHG
+NFL=OTHER
+NGB=CHECK
+NGF=OTHER
+NGM=ATM
+NGT=OTHER
+NIC=OTHER
+NOV=OTHER
+NPK=ATM
+NPO=OTHER
+NST=DEP
+NVZ=OTHER
+
+#NAC = giro debit
+#NBA = cash dispenser transaction
+#NCH = cheque
+#NDV = sundry charges
+#NFL = branch entry, intercompany entry
+#NGB = guaranteed giro cheque
+#NGF = girofoon
+#NGM = giromaat
+#NGT = girotel (individual girotel transfers)
+#NIC = credit of the total amount or debit of e.g. reversals
+#NOV = manual transfer
+#NPK = post office withdrawal
+#NPO = standing order
+#NST = deposit (own account or third-party)
+#NVZ = multi-transfer order (debit of the total amount or credit of the combined entries)
+N=OTHER
+NRNT=OTHER
+N452=OTHER
+N195=OTHER
+N481=OTHER
+
+[Dummy]
+# =======================================
+# SWIFT Transaction Types
+# Type        Description
+# N030        Credit transfer (acceptgiro)
+# N165        Direct Debit one-off (eenmalige incassomachtiging)
+# N191        Direct Debit (doorlopende incassomachtiging, Total klantenkaart..?)
+# N192        Direct Debit (doorlopende incassomachtiging)
+# N196        Deposit (storting)
+# N197        Direct debit one-off (eenmalige incassomachtiging)
+# N361        Cash machine withdrawal (geldautomaat)
+# N411        Credit transfer (overboeking) periodiek?
+# N422        Credit transfer (overboeking)
+# N426	      Point-of-sale (betaalautomaat)
+# N427        Urgent credit transfer (spoedoverboeking)
+# N442        Electronic Purse (chipknip opladen)
+# N445        Cash machine withdrawal (geldautomaat)
+# N446        Foreign Cash Withdrawal (geldautomaat in buitenland)
+# N456        Account charges
+# N485        Credit transfer (overboeking) periodiek?
+# N506        Account charges (kosten pasgebruik)
+# N591        Interest (rente, betaalrekening)
+# N595        Interest (rente, spaarrekening)
+
+# BOE Bill of exchange
+# BRF Brokerage fee
+# CHG Charges and other expenses
+# CHK Cheques
+# CLR Cash letters - Cheques Remittance
+# COL Collections
+# COM Commission
+# DCR Documentary credit
+# DIV Dividends - Warrants
+# ECK Eurocheques
+# EQA Equivalent amount
+# FEX Foreign exchange
+# INT Interest
+# LBX Lock box
+# LDP Loan deposit
+# MSC Miscellaneous
+# RTI Returned item
+# SEC Securities
+# STO Standing order
+# TCK Travellers cheques
+# TRF Transfer
+# VDA Value date adjustment
+
+# =======================================
+# OFX Transaction Types
+# Type        Description
+# CREDIT      Generic credit
+# DEBIT       Generic debit
+# INT         Interest earned or paid
+#             Note: Depends on signage of amount
+# DIV         Dividend
+# FEE         FI fee
+# SRVCHG      Service charge
+# DEP         deposit
+# ATM         ATM debit or credit
+#             Note: Depends on signage of amount
+# POS         Point of sale debit or credit
+#             Note: Depends on signage of amount
+# XFER        Transfer
+# CHECK       Check
+# PAYMENT     Electronic payment
+# CASH        Cash withdrawal
+# DIRECTDEP   Direct deposit
+# DIRECTDEBIT Merchant initiated debit
+# REPEATPMT   Repeating payment/standing order
+# OTHER       Other
+# =======================================
+	]]></resource>
+</job>

@@ -1,0 +1,88 @@
+[OPTIONS]
+Compiled File=MT2OFX.chm
+Title=MT2OFX
+Contents File=MT2OFX.hhc
+Index File=MT2OFX.hhk
+Default topic=About_MT2OFX.htm
+Default Window=NewWindow
+Error log file=
+Display compile progress=No
+Display compile notes=No
+Full-text search=Yes
+Binary Index=Yes
+Auto Index=No
+Enhanced decompilation=No
+Binary TOC=No
+Flat=No
+Custom tab="&Glossary", HHActiveX.GlossaryPane
+
+[WINDOWS]
+NewWindow="MT2OFX Help","MT2OFX.hhc","MT2OFX.hhk","","",,,,,0x400c0520,0,0x200e,[0,0,500,400],0x0,0x0,,0,0,0,[Glossary,HHActiveX.GlossaryPane]
+
+[FILES]
+QIF_Output.htm
+Main_Window.htm
+Configuration\Options_Window.htm
+Configuration\Payee_Mapping_Window.htm
+Configuration\MT940_Matching_Window.htm
+Configuration\MT940_Bank_Options_Window.htm
+Configuration\Regular_Expression_Syntax.htm
+Configuration\New_Bank_Window.htm
+Configuration\INIfile_Reference\MT2OFX.INI.htm
+About_MT2OFX.htm
+Supporting_a_New_Bank.htm
+Version_History.htm
+Configuration\Text_Input_Auto_Recognition_Window.htm
+Configuration\INIfile_Reference\_Text_Extensions__Section.htm
+Configuration\INIfile_Reference\_BankRules__Section.htm
+Configuration\INIfile_Reference\Bank-Specific_Configuration.htm
+Configuration\INIfile_Reference\_TxnTypeMap__Section.htm
+Configuration\INIfile_Reference\_SpecialPayeeNames__Section.htm
+Configuration\INIfile_Reference\_Text__Section.htm
+Configuration\INIfile_Reference\_QIF__Section.htm
+Configuration\INIfile_Reference\_General__Section.htm
+Configuration\INIfile_Reference\_AccountTypes__Section.htm
+Scripting_Reference\Object_Model.htm
+Scripting_Reference\Balance_Object.htm
+Scripting_Reference\PayeeMapItem_Object.htm
+Scripting_Reference\Bcfg_Object.htm
+Scripting_Reference\NonSwiftInfo_Object.htm
+Scripting_Reference\Application_Object.htm
+Scripting_Reference\How_scripts_are_invoked.htm
+Scripting_Reference\Cfg_Object.htm
+Scripting_Reference\Scripting.htm
+Scripting_Reference\PayeeMap_Object.htm
+CSV_and_Text_Input.htm
+Scripting_Reference\Str86Info_Object.htm
+Scripting_Reference\Txns_Collection.htm
+Clipboard_Support.htm
+Scripting_Reference\Txn_Object.htm
+Scripting_Reference\Str86Fields_Enum.htm
+Scripting_Reference\Text_Input_Scripts.htm
+Scripting_Reference\Statement_Object.htm
+Scripting_Reference\Text_Handling_Functions.htm
+Scripting_Reference\Utility_Functions.htm
+Scripting_Reference\StructuredFields_Collection.htm
+Scripting_Reference\Statements_Collection.htm
+Scripting_Reference\StructuredField_Object.htm
+Scripting_Reference\Session_Object.htm
+Scripting_Reference\Splits_Collection.htm
+Scripting_Reference\Split_Object.htm
+Configuration\Configuring_Script_Properties.htm
+Scripting_Reference\Script_Property_Handling.htm
+Scripting_Reference\Payee_Object.htm
+eHelp.xml
+RoboHHRE.lng
+
+MT2OFX.glo
+MT2OFX.brs
+[ALIAS]
+#include MT2OFX.ali
+
+[MAP]
+#include BSSCDefault.h
+
+[TEXT POPUPS]
+BSSCDefault.h
+
+

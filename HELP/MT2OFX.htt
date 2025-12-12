@@ -1,0 +1,114 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>MT2OFX</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=306>
+<meta name=layout-width content=686>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="mt2ofx.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<div placeholder
+	id=header
+	style="width: 100%; position: relative;">
+<!--(Table)=========================================================-->
+ <table x-use-null-cells
+		style="x-cell-content-align: top;
+				width: 100%;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0
+		width=100%>
+  <col style="width: 33.333%;">
+  <col style="width: 33.333%;">
+  <col style="width: 33.333%;">
+
+  <tr style="x-cell-content-align: top;"
+	valign=top>
+  <td style="width: 33.333%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: none;
+			border-left-style: none;
+			border-top-style: none;
+			border-bottom-style: none;"
+	width=33.333%>
+  <p style="font-style: italic; color: #0000ff;">MT2OFX V3.5 Help</td>
+  <td style="width: 33.333%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: none;
+			border-top-style: none;
+			border-bottom-style: none;"
+	width=33.333%>
+  <p style="text-align: center;"
+	align=center>&nbsp;</td>
+  <td style="width: 33.333%;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-top-style: none;
+			border-bottom-style: none;
+			border-right-style: none;"
+	width=33.333%>
+  <p style="text-align: right;
+			font-style: italic;
+			color: #0000ff;"
+	align=right><!--kadov_tag{{<variable name=date
+										x-value=39053.907245>}}-->December 
+ 3, 2006<!--kadov_tag{{</variable>}}--></td></tr>
+ </table>
+</div>
+<h1><!--kadov_tag{{<variable name=title
+							x-format=default
+							x-value=MT2OFX>}}-->MT2OFX<!--kadov_tag{{</variable>}}--></h1>
+
+<p>This is placeholder text for your template. To add content to the body, 
+ replace this text. To add a header or footer, click the <b>Header</b> 
+ or <b>Footer</b> button on the toolbar.</p>
+
+<p>&nbsp;</p>
+
+<p>The heading in this template is a special field for topic titles, so 
+ generally you do not need to edit it.</p>
+
+<p>&nbsp;</p>
+
+<p>For information about applying templates to topics, press <b>F1</b>.</p>
+
+<div placeholder
+	id=footer
+	style="width: 100%; position: relative;">
+ <p style="font-style: italic; color: #0000ff;"><symbol name=Copyright><!--begin!kadov{{-->&#169;<!--}}end!kadov--> 
+ Colin Smale 2003-2006. All rights reserved.</p>
+</div>
+</body>
+
+</html>

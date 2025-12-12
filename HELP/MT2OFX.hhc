@@ -1,0 +1,289 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="toc">
+  <param name="Image Width" value="16">
+  <param name="Window Styles" value="0x800002">
+  <param name="ExWindow Styles" value="0x100">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Welcome to MT2OFX">
+    <param name="Local" value="About_MT2OFX.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="MT2OFX Main Window">
+    <param name="Local" value="Main_Window.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Version History">
+    <param name="Local" value="Version_History.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Clipboard Support">
+    <param name="Local" value="Clipboard_Support.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="QIF Output">
+    <param name="Local" value="QIF_Output.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Supporting a New Bank">
+    <param name="Local" value="Supporting_a_New_Bank.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Configuration">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Options Window">
+      <param name="Local" value="Configuration\Options_Window.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="MT940 Bank Options Window">
+      <param name="Local" value="Configuration\MT940_Bank_Options_Window.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="MT940 New Bank Window">
+      <param name="Local" value="Configuration\New_Bank_Window.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="MT940 Matching Window">
+      <param name="Local" value="Configuration\MT940_Matching_Window.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Payee Mapping Window">
+      <param name="Local" value="Configuration\Payee_Mapping_Window.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Regular Expression Syntax">
+      <param name="Local" value="Configuration\Regular_Expression_Syntax.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Text Input Auto Recognition Window">
+      <param name="Local" value="Configuration\Text_Input_Auto_Recognition_Window.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="MT2OFX.INI Reference">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="MT2OFX.INI">
+        <param name="Local" value="Configuration\INIfile_Reference\MT2OFX.INI.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Bank-Specific Configuration">
+        <param name="Local" value="Configuration\INIfile_Reference\Bank-Specific_Configuration.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[AccountTypes] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_AccountTypes__Section.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[BankRules] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_BankRules__Section.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[General] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="ApplicationHomePage">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#ApplicationHomePage">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="AutoBrowse">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#AutoBrowse">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="BookDateMode">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#BookDateMode">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="CompressSpaces">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#CompressSpaces">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="LogFile">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#LogFile">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="MemoDelimiter">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#MemoDelimiter">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="OutputFileType">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#OutputFileType">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="PayeeCase">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#PayeeCase">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="PromptForOutput">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#PromptForOutput">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="StartImportAfterConversion">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#StartImportAfterConversion">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="ScriptTimeout">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#ScriptTimeout">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="TxnDumpFile">
+          <param name="Local" value="Configuration\INIfile_Reference\_General__Section.htm#TxnDumpFile">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[QIF] Section">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="DateFormat">
+          <param name="Local" value="Configuration\INIfile_Reference\_QIF__Section.htm#DateFormat">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="DecimalSeparator">
+          <param name="Local" value="Configuration\INIfile_Reference\_QIF__Section.htm#DecimalSeparator">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="NoAccountHeader">
+          <param name="Local" value="Configuration\INIfile_Reference\_QIF__Section.htm#NoAccountHeader">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[SpecialPayeeNames] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_SpecialPayeeNames__Section.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[Text] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_Text__Section.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[Text Extensions] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_Text_Extensions__Section.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="[TxnTypeMap] Section">
+        <param name="Local" value="Configuration\INIfile_Reference\_TxnTypeMap__Section.htm">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Scripting Reference">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Scripting">
+      <param name="Local" value="Scripting_Reference\Scripting.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="How scripts are invoked">
+      <param name="Local" value="Scripting_Reference\How_scripts_are_invoked.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Text Input Scripts">
+      <param name="Local" value="Scripting_Reference\Text_Input_Scripts.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="CSV and Text Input">
+      <param name="Local" value="CSV_and_Text_Input.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Text Handling Functions">
+      <param name="Local" value="Scripting_Reference\Text_Handling_Functions.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Script Property Handling">
+      <param name="Local" value="Scripting_Reference\Script_Property_Handling.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Object Model">
+      <param name="Local" value="Scripting_Reference\Object_Model.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Application Object">
+      <param name="Local" value="Scripting_Reference\Application_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Balance Object">
+      <param name="Local" value="Scripting_Reference\Balance_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="BankConfig Object">
+      <param name="Local" value="Scripting_Reference\Bcfg_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="NonSwiftInfo Object">
+      <param name="Local" value="Scripting_Reference\NonSwiftInfo_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Payee Object">
+      <param name="Local" value="Scripting_Reference\Payee_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="PayeeMap Object">
+      <param name="Local" value="Scripting_Reference\PayeeMap_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="PayeeMapItem Object">
+      <param name="Local" value="Scripting_Reference\PayeeMapItem_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ProgramConfig Object">
+      <param name="Local" value="Scripting_Reference\Cfg_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Session Object">
+      <param name="Local" value="Scripting_Reference\Session_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Split Object">
+      <param name="Local" value="Scripting_Reference\Split_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Splits Collection">
+      <param name="Local" value="Scripting_Reference\Splits_Collection.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Statement Object">
+      <param name="Local" value="Scripting_Reference\Statement_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Statements Collection">
+      <param name="Local" value="Scripting_Reference\Statements_Collection.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Str86Fields Enum">
+      <param name="Local" value="Scripting_Reference\Str86Fields_Enum.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Str86Info Object">
+      <param name="Local" value="Scripting_Reference\Str86Info_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="StructuredField Object">
+      <param name="Local" value="Scripting_Reference\StructuredField_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="StructuredFields Collection">
+      <param name="Local" value="Scripting_Reference\StructuredFields_Collection.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Txn Object">
+      <param name="Local" value="Scripting_Reference\Txn_Object.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Txns Collection">
+      <param name="Local" value="Scripting_Reference\Txns_Collection.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Utility Functions">
+      <param name="Local" value="Scripting_Reference\Utility_Functions.htm">
+    </object>
+    </ul>
+</ul>
+</html>

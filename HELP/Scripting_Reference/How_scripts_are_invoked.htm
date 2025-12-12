@@ -1,0 +1,802 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>How scripts are invoked</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name="template" content="MT2OFX.htt">
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=topic-status content="Ready for Review">
+<meta name=topic-priority content=0>
+<meta name=topic-time-estimate content=0>
+<meta name=topic-comment content>
+<meta name=topic-id content>
+<meta name=topic-check-list content="Ran Smart Index">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=938>
+<meta name=layout-width content=739>
+
+
+<!--(Links)=========================================================-->
+
+<link rel="StyleSheet" href="../mt2ofx.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<!--kadov_tag{{<placeholder id="header">}}-->
+<h1><!--kadov_tag{{<variable name=title
+							x-format=default
+							x-value="How scripts are invoked">}}-->How 
+ scripts are invoked<!--kadov_tag{{</variable>}}--></h1>
+
+<p>Script files are loaded and executed as needed. See <a href="../About_MT2OFX.htm#ProgramFlow">Program 
+ Flow</a> for a description.</p>
+
+<p>&nbsp;</p>
+
+<p>The global script file MT2OFX.VBS is loaded when the first statement 
+ is to be processed. The bank-specific scripts, referred to in MT2OFX.INI, 
+ are loaded when they are first required.</p>
+
+<p>&nbsp;</p>
+
+<p>Every script file can have as many procedures as you may require, but 
+ certain procedures are considered special and are called by MT2OFX at 
+ specific moments. These procedures do not have to be provided, but if 
+ they are, they must expect the correct number of parameters or an error 
+ will be given when the script file is loaded.</p>
+
+<p>&nbsp;</p>
+
+<p>There are significant differences between scripts for MT940 files and 
+ scripts for other input files.</p>
+
+<p>&nbsp;</p>
+
+<p>The following table lists the standard procedures to be implemented 
+ by an MT940 processing script.</p>
+
+<p>&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0>
+<col>
+<col>
+<col>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="background-color: #c0c0c0;
+			border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Name</td>
+<td style="background-color: #c0c0c0;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Parameters</td>
+<td style="background-color: #c0c0c0;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Called</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-width: 1px;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>Initialise</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-width: 1px;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-width: 1px;
+			border-right-width: 4px;">
+<p>When script is loaded</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>DescriptiveName</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>When the option dialogs need a description for the script</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>Configure</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>When the user wishes to set the script's property values</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>SessionStart</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>Just before the output file header is written</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>ProcessStatement</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p><a href="Statement_Object.htm">Statement</a></td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>Before a statement header is written to the output</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-left-width: 4px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-right-width: 4px;
+			border-bottom-style: none;">
+<p>ProcessTransaction</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-right-width: 4px;
+			border-bottom-style: none;">
+<p><a href="Txn_Object.htm">Txn</a></td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-right-width: 4px;
+			border-bottom-style: none;">
+<p>Before a transaction is written to the output</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;">
+<p>SessionEnd</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;">
+<p>(none)</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;">
+<p>Before the file trailer is written to the output</td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>The following table lists the standard procedures to be implemented 
+ by a text input processing script. More information can be found <a href="Text_Input_Scripts.htm">here</a>.</p>
+
+<p>&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0>
+<col>
+<col>
+<col>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="background-color: #c0c0c0;
+			border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Name</td>
+<td style="background-color: #c0c0c0;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Parameters</td>
+<td style="background-color: #c0c0c0;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Called</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-width: 1px;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>Initialise</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-width: 1px;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-width: 1px;
+			border-right-width: 4px;">
+<p>When script is loaded</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-style: Ridge;
+			border-left-color: #008080;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>DescriptiveName</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-style: Ridge;
+			border-right-color: #008080;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>When the option dialogs need a description for the script</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>Configure</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>When the user wishes to set the script's property values</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;
+			border-left-width: 4px;">
+<p>RecogniseTextFile</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>(none)</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: none;
+			border-right-width: 4px;">
+<p>When a text file is offered to a script for recognition</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;">
+<p>LoadTextFile</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;">
+<p>(none)</td>
+<td colspan=1
+	rowspan=1
+	style="padding-right: 10px;
+			padding-left: 10px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;">
+<p>When a script recognises a text file, this function is called to allow 
+ the script to drive the conversion process</td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>When a script procedure is invoked, the following global objects are 
+ available, although some may be empty if they are not relevant:</p>
+
+<p>&nbsp;</p>
+
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="x-cell-content-align: top;
+				border-spacing: 0px;
+				border-spacing: 0px;"
+		cellspacing=0>
+<col>
+<col>
+<col>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="background-color: #c0c0c0;
+			border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Object</td>
+<td colspan=1
+	rowspan=1
+	style="background-color: #c0c0c0;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Type</td>
+<td style="background-color: #c0c0c0;
+			border-top-style: Ridge;
+			border-top-color: #008080;
+			border-top-width: 4px;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;"
+	bgcolor=#C0C0C0>
+<p style="font-weight: bold;">Description</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>Cfg</td>
+<td colspan=1
+	rowspan=1
+	style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p><a href="Cfg_Object.htm">ProgramConfig</a></td>
+<td style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>The program configuration</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>Bcfg</td>
+<td colspan=1
+	rowspan=1
+	style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p><a href="Bcfg_Object.htm">BankConfig</a></td>
+<td style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>The bank-specific configuration for the current bank</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>Session</td>
+<td colspan=1
+	rowspan=1
+	style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p><a href="Session_Object.htm">Session</a></td>
+<td style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>The current conversion session</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>Statement</td>
+<td colspan=1
+	rowspan=1
+	style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p><a href="Statement_Object.htm">Statement</a></td>
+<td style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-width: 1px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>The statement currently being processed</td></tr>
+
+<tr style="x-cell-content-align: top;"
+	valign=top>
+<td style="border-left-width: 4px;
+			border-left-color: #008080;
+			border-left-style: Ridge;
+			border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>Txn</td>
+<td colspan=1
+	rowspan=1
+	style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p><a href="Txn_Object.htm">Txn</a></td>
+<td style="border-right-width: 4px;
+			border-right-color: #008080;
+			border-right-style: Ridge;
+			border-bottom-style: Ridge;
+			border-bottom-color: #008080;
+			border-bottom-width: 4px;
+			padding-right: 10px;
+			padding-left: 10px;">
+<p>The transaction currently being processed</td></tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>There are many <a href="Utility_Functions.htm">utility functions</a> 
+ available to the scripts.</p>
+
+<p>&nbsp;</p>
+
+<!--kadov_tag{{<placeholder id="footer">}}-->
+</body>
+
+</html>

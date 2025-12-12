@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="In Progress" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="Text_Handling_Functions" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Text Handling Functions</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="Text Handling Functions" ?>Text Handling Functions<?rh-variable_end ?></h1>
+<p>These functions are available from within scripts to support the processing of text input files. See also <a href="Utility_Functions.htm">Utility Functions</a>.</p>
+<p>&#160;</p>
+<h5><a name="ReadLine" id="ReadLine"></a>Function ReadLine() As String</h5>
+<p>Returns the next line from the input file.</p>
+<p>&#160;</p>
+<h5><a name="AtEOF" id="AtEOF"></a>Function AtEOF() As Boolean</h5>
+<p>Returns True if the end of the input file has been reached, i.e. a further call to ReadLine() will cause an error.</p>
+<p>&#160;</p>
+<h5><a name="Rewind" id="Rewind"></a>Sub Rewind()</h5>
+<p>Resets the file pointer of the input file to the start of the file.</p>
+<p>&#160;</p>
+<h5><a name="EntireFile" id="EntireFile"></a>Function EntireFile() As String</h5>
+<p>Returns the entire input file as a long string. <span style="font-style: italic;">(From V3.4)</span></p>
+<p>&#160;</p>
+<h5><a name="NewTransaction" id="NewTransaction"></a>Function NewTransaction() As <a href="Txn_Object.htm">Txn</a></h5>
+<p>Returns a new <a href="Txn_Object.htm">Txn</a> object in which a transaction can be stored. The new transaction is automatically added to the Statement.Txns collection.</p>
+<p>&#160;</p>
+<h5><a name="NewStatement" id="NewStatement"></a>Function NewStatement() As <a href="Statement_Object.htm">Statement</a></h5>
+<p>Returns a new <a href="Statement_Object.htm">Statement</a> object. The new Statement is automatically added to the Session.Statements collection.</p>
+<p>&#160;</p>
+<h5><a name="ParseLineFixed" id="ParseLineFixed"></a>Function ParseLineFixed(ByVal Line As Variant, ByVal Pattern As Variant) As Variant</h5>
+<p>Returns an array of strings (1-based) representing the parts of the input line captured when it is matched against the pattern using the RegExp functionality in VBScript version 5 and later.</p>
+<p>&#160;</p>
+<p>For full details of the syntax of a pattern, please consult the documentation included in Microsoft Scripting 5.6 which can be consulted <a title="Introduction to Regular Expressions" href="http://msdn.microsoft.com/library/en-us/script56/html/reconintroductiontoregularexpressions.asp" target="_blank">online</a>. The documentation can be downloaded <a href="http://msdn.microsoft.com/downloads/list/webdev.asp" target="_blank">here</a>.</p>
+<p>&#160;</p>
+<h5><a name="ParseLineDelimited" id="ParseLineDelimited"></a>Function ParseLineDelimited(ByVal Line As String, ByVal Delimiter As String) As Variant</h5>
+<p>Returns an array of strings (1-based) representing the parts of the input line delimited by the given delimiter, typically a comma or a tab character. The fields may also be enclosed in single or double quotes which are removed before the value is returned.</p>
+<p>&#160;</p>
+<h5><a name="ParseNumber" id="ParseNumber"></a>Function ParseNumber(NumString As String, DecimalChar As String) As Double</h5>
+<p>Parses the string in <span style="font-weight: bold; font-style: italic;">NumString,</span> <span>which must represent a number using DecimalChar as decimal point. The number string must contain only digits, "-", "+", "." and ",".</span></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

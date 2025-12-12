@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="In Progress" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="Scripting_Reference\Session_Object.htm" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>PayeeMapItem Object</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+<script language="javascript" src="../ehlpdhtm.js" type="text/javascript">
+</script>
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="PayeeMapItem Object" ?>PayeeMapItem Object<?rh-variable_end ?></h1>
+<p style="font-style: italic;">(new from version 3.1)</p>
+<p>&#160;</p>
+<table cellspacing="0" width="76.426%">
+<col />
+<col />
+<col width="273" />
+<tr style="vertical-align: top;">
+<td style="border-top: Ridge 4px #008080; border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; border-bottom-width: 1px; padding-right: 10px; padding-left: 10px;" bgcolor="#C0C0C0">
+<p style="font-weight: bold;">Name</p>
+</td>
+<td style="border-top: Ridge 4px #008080; border-right: Ridge 4px #008080; border-bottom-width: 1px; padding-right: 10px; padding-left: 10px;" bgcolor="#C0C0C0">
+<p style="font-weight: bold;">Type</p>
+</td>
+<td style="border-top: Ridge 4px #008080; border-right: Ridge 4px #008080; border-bottom-width: 1px; padding-right: 10px; padding-left: 10px;" width="273" bgcolor="#C0C0C0">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; border-bottom-width: 1px; padding-right: 10px; padding-left: 10px;">
+<p>Pattern</p>
+</td>
+<td style="border-right: Ridge 4px #008080; border-bottom-width: 1px; padding-right: 10px; padding-left: 10px;">
+<p>String</p>
+</td>
+<td style="border-right: Ridge 4px #008080; border-bottom-width: 1px; padding-right: 10px; padding-left: 10px;" width="273">
+<p>The regular expression which is matched against the payee or memo.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>MatchField</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>Integer</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;" width="273">
+<p>mfPayee (1): match Pattern against the payee</p>
+<p>mfMemo (2): match Pattern against the memo</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>Replacement</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>String</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;" width="273">
+<p>The string which is used to replace the Payee found when the Pattern matches.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>Category</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>String</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;" width="273">
+<p>The category for the transaction. This information cannot be represented in OFC and OFX files, so is only useful for QIF output.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>SIC</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>Long</p>
+</td>
+<td style="border-right: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;" width="273">
+<p>Standard Industry Code, defined by the US Government. Used in the USA to classify a company, service or product. It is included in the OFX specification.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Ridge 4px #008080; border-right: Ridge 4px #008080; border-bottom: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>NoReturn</p>
+</td>
+<td style="border-right: Ridge 4px #008080; border-bottom: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;">
+<p>Boolean</p>
+</td>
+<td style="border-right: Ridge 4px #008080; border-bottom: Ridge 4px #008080; padding-right: 10px; padding-left: 10px;" width="273">
+<p>If True, the rule will not terminate the payee matching process. If False (default) the payee matching stops following the first match.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>For full information about the regular expression syntax supported in the patterns, see <a href="../Configuration/Regular_Expression_Syntax.htm">Regular Expression Syntax</a>.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

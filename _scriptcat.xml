@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mt2ofx>
+  <version><![CDATA[$Revision: 10 $]]></version>
+  <versiondate><![CDATA[$Date: 15/06/09 19:25 $]]></versiondate>
+  <format id="Text" en="Text" fr="Texte" du="Tekst" ge="Text" />
+  <format id="XLS" en="Excel XLS" fr="Excel XLS" du="Excel XLS" ge="Excel XLS" />
+  <format id="CSV" en="Comma-separated" fr="Séparées par des virgules" du="Kommagescheiden" ge="Kommagetrennt" />
+  <format id="TSV" en="Tab-separated" fr="Séparées par des tabulations" du="Tabgescheiden" ge="Tabgetrennt" />
+  <format id="MT940" en="MT940" fr="MT940" du="MT940" ge="MT940" />
+  <format id="OFX" en="OFX" fr="OFX" du="OFX" ge="OFX" />
+  <format id="OFC" en="OFC" fr="OFC" du="OFC" ge="OFC" />
+  <format id="QIF" en="QIF" fr="QIF" du="QIF" ge="QIF" />
+  <format id="XML" en="XML" fr="XML" du="XML" ge="XML" />
+  <format id="Web" en="Web" fr="Web" du="Web" ge="Web" />
+  <bankscript name="2checkout" format="CSV" id="2checkout-CSV">
+    <script>2checkout-CSV.vbs</script>
+    <region>us</region>
+  </bankscript>
+  <bankscript name="ABN Amro" format="MT940" id="ABNANL2A-MT940">
+    <script>ABN Amro.vbs</script>
+    <region>nl</region>
+    <section name="ABNANL2A">
+      <match>
+        <lines>1</lines>
+        <pattern>ABNANL2A</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Alliance &amp; Leicester" format="CSV" id="ALEIGB22-CSV">
+    <script>Alliance&amp;LeicesterUK-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Abbey Bank (Business)" format="CSV" id="ABBYGB2L-CSV">
+    <script>AbbeyUK-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Abbey Bank (Consumer)" format="CSV" id="ABBYGB2L2-CSV">
+    <script>AbbeyUK2-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="American Express (nl)" format="Web" id="AMEXNL22-WEB">
+    <script>AmexNL-HTML.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Argenta (be)" format="CSV" id="ARSPBE22-CSV">
+    <script>ArgentaBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="Argenta (nl)" format="TSV" id="ARSNNL21-TSV">
+    <script>ArgentaNL-TSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Axa (be)" format="CSV" id="AXABBE22-CSV">
+    <script>AxaBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="Axa (fr)" format="Web" id="AXABFRPP-Web">
+    <script>AxaFR-Web.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="Banca Sella" format="CSV" id="SELBIT22-CSV">
+    <script>BancaSellaIT-CSV.vbs</script>
+    <region>it</region>
+  </bankscript>
+  <bankscript name="Bank Austria" format="CSV" id="BKAUATWW-CSV">
+    <script>BankAustria-CSV.vbs</script>
+    <region>at</region>
+  </bankscript>
+  <bankscript name="Bank Leumi" format="CSV" id="LUMIILIT-DAT">
+    <script>BankLeumiIL-DAT.vbs</script>
+    <region>il</region>
+  </bankscript>
+  <bankscript name="Bank Of Asia" format="CSV" id="BKASTHBK-CSV">
+    <script>BankOfAsia-CSV.vbs</script>
+    <region>th</region>
+  </bankscript>
+  <bankscript name="Bank Of Scotland" format="CSV" id="BOFSGB2S-CSV">
+    <script>BankOfScotlandUK-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Bankinter" format="CSV" id="BKBKESMM-XLS">
+    <script>BankinterES-XLS.vbs</script>
+    <region>es</region>
+  </bankscript>
+  <bankscript name="Banque Cantonale Vaudoise" format="XLS" id="BCVLCH2L-XLS">
+    <script>BanqueCantonaleVaudoiseCH-XLS.vbs</script>
+    <region>ch</region>
+  </bankscript>
+  <bankscript name="Barclaycard" format="CSV" id="BARCGB2108L-CSV">
+    <script>Barclaycard-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Barclays (Guernsey)" format="CSV" id="BARCGGS1-CSV">
+    <script>BarclaysCI-CSV.vbs</script>
+    <region>gg</region>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Barclays (Isle of Man)" format="CSV" id="BFIMIMD1-CSV">
+    <script>BarclaysIM-CSV.vbs</script>
+    <region>im</region>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Basler Kantonalbank" format="MT940" id="BKBBCHBB-MT940">
+    <script>BaslerKantonalbank.vbs</script>
+    <region>ch</region>
+    <section name="BKBBCHBB">
+      <match>
+        <lines>5</lines>
+        <pattern>:25:00000770/*</pattern>
+      </match>
+      <structured86>1</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Berner Kantonalbank" format="MT940" id="KBBECH22-MT940">
+    <script>BernerKantonalbank.vbs</script>
+    <region>ch</region>
+  </bankscript>
+  <bankscript name="Caixa Geral" format="TSV" id="CGDIES21-TSV">
+    <script>CaixaGeralES-TSV.vbs</script>
+    <region>es</region>
+  </bankscript>
+  <bankscript name="Carrefour Visa" format="Web" id="carrefour-web">
+    <script>CarrefourVisaFR-Web.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="Citibank (Canada)" format="Web" id="CITICATT-Web">
+    <script>CitibankCA-Web.vbs</script>
+    <region>ca</region>
+  </bankscript>
+  <bankscript name="Citibank (Belgium)" format="CSV" id="CTBKBEBX-CSV">
+    <script>CitibankBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="CitiCard (Canada)" format="CSV" id="CITICATTXXX-CSV">
+    <script>CiticardCA-CSV.vbs</script>
+    <region>ca</region>
+  </bankscript>
+  <bankscript name="Credit Lyonnais" format="OFX" id="CRLYFRPP-OFX">
+    <script>CL-OFX.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="Credit Suisse" format="CSV" id="CRESCHZZ-CSV">
+    <script>CreditSuisseCH-CSV.vbs</script>
+    <region>ch</region>
+  </bankscript>
+  <bankscript name="Coop" format="MT940" id="COOPCHBB-MT940">
+    <script>CoopCH.vbs</script>
+    <region>ch</region>
+  </bankscript>
+  <bankscript name="Cooperative Bank" format="CSV" id="CPBKGB22-CSV">
+    <script>CoopGB-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Credit Suisse" format="MT940" id="CRESCH22-MT940">
+    <script>Credit Suisse.vbs</script>
+    <region>ch</region>
+    <section name="CRESCH22">
+      <match>
+        <lines>2</lines>
+        <pattern>{CRESCHZZ45R</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Danske Bank" format="CSV" id="DABADKKK-CSV">
+    <script>DanskeBank-CSV.vbs</script>
+    <region>dk</region>
+  </bankscript>
+  <bankscript name="Deutsche Bank (Berlin)" format="CSV" id="DEUTDEBB-CSV">
+    <script>DBBerlinDE-CSV.vbs</script>
+    <region>de</region>
+  </bankscript>
+  <bankscript name="Dexia" format="CSV" id="GKCCBEBB-CSV">
+    <script>DexiaBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="De Post" format="CSV" id="PCHQBEBB-CSV">
+    <script>DePostBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="Desjardins" format="CSV" id="CCDQCAMM-CSV">
+    <script>DesjardinsCA-CSV.vbs</script>
+    <region>ca</region>
+  </bankscript>
+  <bankscript name="DiscoverCard" format="CSV" id="Discover-CSV">
+    <script>DiscoverUS-CSV.vbs</script>
+    <region>us</region>
+  </bankscript>
+  <bankscript name="DnB NOR" format="CSV" id="DNBANOKK-CSV">
+    <script>DnBNOR-CSV.vbs</script>
+    <region>no</region>
+  </bankscript>
+  <bankscript name="DBS Bank" format="CSV" id="DBSSSGSG-CSV">
+    <script>DSBBankSG-CSV.vbs</script>
+    <region>sg</region>
+  </bankscript>
+  <bankscript name="Egg" format="Web" id="EGGGGB2L-Web">
+    <script>EggUK-HTML.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="e-gold" format="CSV" id="egold-CSV">
+    <script>eGold-CSV.vbs</script>
+    <region>us</region>
+  </bankscript>
+  <bankscript name="Fiduciaria Bogotá (Colombia)" format="CSV" id="FBOGCOB1-CSV">
+    <script>FiduciariaBogotaCO-CSV.vbs</script>
+    <region>co</region>
+  </bankscript>
+  <bankscript name="Fortis (be)" format="CSV" id="GABABEBB-CSV">
+    <script>FortisBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="Fortis (nl)" format="MT940" id="FTSBNL2R-MT940">
+    <script>Fortis.vbs</script>
+    <region>nl</region>
+    <section name="FTSBNL2R">
+      <match>
+        <lines>1</lines>
+        <pattern>:20:99 9999999999</pattern>
+      </match>
+      <structured86>1</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Friesland Bank" format="CSV" id="FRBKNL2L-CSV">
+    <script>FrieslandBankNL-CSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Generic OFC" format="OFC" id="generic-OFC">
+    <script>Generic-OFC.vbs</script>
+    <region>zz</region>
+    <linkto>
+      <extension>OFC</extension>
+    </linkto>
+  </bankscript>
+  <bankscript name="Generic OFX" format="OFX" id="generic-OFX">
+    <script>Generic-OFX.vbs</script>
+    <linkto>
+      <extension>OFX</extension>
+      <extension>QFX</extension>
+    </linkto>
+    <region>zz</region>
+  </bankscript>
+  <bankscript name="Generic QIF" format="QIF" id="generic-QIF">
+    <script>Generic-QIF.vbs</script>
+    <region>zz</region>
+    <linkto>
+      <extension>QIF</extension>
+    </linkto>
+  </bankscript>
+  <bankscript name="Handelsbanken" format="Web" id="HANDSESS-Web">
+    <script>HandelsbankenSE-WEB.vbs</script>
+    <region>se</region>
+  </bankscript>
+  <bankscript name="Hansa Bank (Swedbank)" format="CSV" id="HABAEE2X-CSV">
+    <script>HansaBankEE-CSV.vbs</script>
+    <region>ee</region>
+  </bankscript>
+  <bankscript name="HDFC" format="QIF" id="HDFCINXX-QIF">
+    <script>HDFC-QIF.vbs</script>
+    <region>in</region>
+  </bankscript>
+  <bankscript name="C. Hoare &amp; Co." format="CSV" id="HOABGB2L-CSV">
+    <script>HoaresUK-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="HSBC Bank Canada" format="CSV" id="HKBCCATT-CSV">
+    <script>HsbcCA-CSV.vbs</script>
+    <region>ca</region>
+  </bankscript>
+  <bankscript name="ICICI Bank" format="XLS" id="ICICGB2L-XLS">
+    <script>IciciUK-XLS.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="ING Bank (nl)" format="Text" id="INGBNL2A-Text">
+    <script>ING-Asc.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="ING Bank (nl)" format="CSV" id="INGBNL2A-CSV">
+    <script>ING-CSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="ING Bank (nl)" format="MT940" id="INGBNL2A-MT940">
+    <script>INGNL-MT940.vbs</script>
+    <region>nl</region>
+    <section name="INGBNL2A">
+      <match>
+        <lines>1</lines>
+        <pattern>*INGBNL2A*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="ING Bank (be)" format="CSV" id="BBRUBEBB-CSV">
+    <script>INGBE-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="IW Bank" format="XLS" id="IWBKITMM-XLS">
+    <script>IWBankIT-XLS.vbs</script>
+    <region>it</region>
+  </bankscript>
+  <bankscript name="KBC Online" format="CSV" id="KREDBEBB-CSV">
+    <script>KBCOnline-CSV.vbs</script>
+    <region>be</region>
+  </bankscript>
+  <bankscript name="La Banque Postale" format="TSV" id="PSSTFRPP-TSV">
+    <script>La Poste-TSV.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="Lloyds TSB" format="CSV" id="TSBBGB22-CSV">
+    <script>LloydsTSB-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Lloyds TSB" format="QIF" id="TSBBGB22-QIF">
+    <script>LloydsTSB-QIF.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Luzerner Kantonalbank" format="MT940" id="LUKBCH22-MT940">
+    <script>Luzerner.vbs</script>
+    <region>ch</region>
+    <section name="LUKBCH22">
+      <match>
+        <lines>2</lines>
+        <pattern>:20:STARTUMS*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="mBank" format="CSV" id="BREXPLPWMBK-CSV">
+    <script>mBankPL-CSV.vbs</script>
+    <region>pl</region>
+  </bankscript>
+  <bankscript name="mBank Visa" format="CSV" id="BREXPLPWMBK-Visa-CSV">
+    <script>mBankVisaPL-CSV.vbs</script>
+    <region>pl</region>
+  </bankscript>
+  <bankscript name="MeesPierson" format="MT940" id="FTSBNL2RMP-MT940">
+    <script>MeesPierson.vbs</script>
+    <region>nl</region>
+    <section name="MPXXNLXX">
+      <match>
+        <lines>1</lines>
+        <pattern>:20:EUR-021118-227</pattern>
+      </match>
+      <match>
+        <lines>1</lines>
+        <pattern>{1:F01GEBANL2R*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="MS Money XML Report" format="XML" id="money-XML">
+    <script>MoneyXMLReport.vbs</script>
+    <region>zz</region>
+  </bankscript>
+  <bankscript name="MoneYou" format="CSV" id="ABNANL2A-MY-CSV">
+    <script>MoneYouNL-CSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Nationwide" format="CSV" id="NAIAGB21-CSV">
+    <script>Nationwide-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Nationwide Credit Card" format="CSV" id="NAIAGB21cc-CSV">
+    <script>NationwideCC-CSV.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="Postbank Girotel Offline ASC" format="CSV" id="PSTBNL22a-Text">
+    <script>Postbank-Asc-GTOffline.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Postbank ASC" format="Text" id="PSTBNL22b-Text">
+    <script>Postbank-Asc.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Postbank ASC CSV" format="CSV" id="PSTBNL22b-CSV">
+    <script>Postbank-AscCSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Postbank-MijnPostbankCSV.vbs" format="CSV" id="PSTBNL22a-CSV">
+    <script>Postbank-MijnPostbankCSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Postbank (nl)" format="MT940" id="PSTBNL22-MT940">
+    <script>Postbank.vbs</script>
+    <region>nl</region>
+    <section name="PSTBNL22">
+      <match>
+        <lines>1</lines>
+        <pattern>*PSTBNL22*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Postbank (nl)" format="CSV" id="PSTBNL22-CSV">
+    <script>PostbankNL-MijnPostbank-CSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="PSK Bank" format="CSV" id="OPSKATWW-CSV">
+    <script>PskAT-CSV.vbs</script>
+    <region>at</region>
+  </bankscript>
+  <bankscript name="Rabobank" format="CSV" id="RABONL2U-CSV">
+    <script>Rabo-CSV.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Rabobank MutAsc" format="Text" id="RABONL2U-MUTASC">
+    <script>Rabo-MutAsc.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Raiffeisenbank Zürich" format="MT940" id="RAIFCH22-MT940">
+    <script>RaiffeisenbankZurich.vbs</script>
+    <region>ch</region>
+    <section name="RAIFCH22">
+      <match>
+        <lines>3</lines>
+        <pattern>:25:00080673/*</pattern>
+      </match>
+      <match>
+        <lines>5</lines>
+        <pattern>:25:00080912/*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Shinsei Bank (株式会社新生銀行)" format="TSV" id="LTCBJPJT-TSV">
+    <script>ShinseiJP-TSV.vbs</script>
+    <region>jp</region>
+  </bankscript>
+  <bankscript name="Skandiabanken" format="CSV" id="SKIADKK1-CSV">
+    <script>SkandiaDK-CSV.vbs</script>
+    <region>dk</region>
+  </bankscript>
+  <bankscript name="Smile" format="Web" id="CPBKGB11-Web">
+    <script>SmileUK-WEB.vbs</script>
+    <region>gb</region>
+  </bankscript>
+  <bankscript name="SNS Bank" format="MT940" id="SNSBNL2A-MT940">
+    <script>SNS Bank.vbs</script>
+    <region>nl</region>
+    <section name="SNSBNL2A">
+      <match>
+        <lines>1</lines>
+        <pattern>{1:F01SNSBNL2A*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="SNS Bank" format="CSV" id="SNSBNL2A-CSV">
+    <script>SNSBank-Csv.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Société Générale V1" format="CSV" id="SOGEFRPP-CSV">
+    <script>SocGen-CSV.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="Société Générale V2" format="CSV" id="SOGEFRPPa-CSV">
+    <script>SocGen2-CSV.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="Société Générale Carte Bancaire" format="CSV" id="SOGEFRPPcc-CSV">
+    <script>SocGenCC-CSV.vbs</script>
+    <region>fr</region>
+  </bankscript>
+  <bankscript name="SparNebel" format="CSV" id="NRNEDK21-CSV">
+    <script>SparNebelDK-CSV.vbs</script>
+    <region>dk</region>
+  </bankscript>  
+  <bankscript name="Spar- Und Leihkasse" format="MT940" id="RBABCH22-MT940">
+    <script>SparUndLeihkasse.vbs</script>
+    <region>ch</region>
+    <section name="RBABCH22">
+      <match>
+        <lines>5</lines>
+        <pattern>:25:00006866/*</pattern>
+      </match>
+      <structured86>1</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Sparkasse Allgaeu" format="MT940" id="BYLADEM1ALG-MT940">
+    <script>SparkasseAllgaeu.vbs</script>
+    <region>de</region>
+    <section name="BYLADEM1ALG">
+      <match>
+        <lines>3</lines>
+        <pattern>:25:73350000/*</pattern>
+      </match>
+      <structured86>1</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Stadtsparkasse Dortmund" format="MT940" id="DORTDE33-MT940">
+    <script>StadtsparkasseDortmund.vbs</script>
+    <region>de</region>
+    <section name="DORTDE33">
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Sparkasse Hildesheim" format="MT940" id="NOLADE21HIK-MT940">
+    <script>SparkasseHildesheim.vbs</script>
+    <region>de</region>
+    <section name="NOLADE21HIK">
+      <structured86>1</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Standard Chartered Bank (Ghana)" format="CSV" id="SCBLGHAC-CSV">
+    <script>StandardCharteredGH-CSV.vbs</script>
+    <region>gh</region>
+  </bankscript>
+  <bankscript name="Syd Bank" format="CSV" id="SYBKDK22-CSV">
+    <script>SydBankDK-CSV.vbs</script>
+    <region>dk</region>
+  </bankscript>
+  <bankscript name="Triodos Bank" format="MT940" id="TRIONL21-MT940">
+    <script>TriodosNL-MT940.vbs</script>
+    <region>nl</region>
+    <section name="TRIONL21">
+      <match>
+        <lines>3</lines>
+        <pattern>:25:TRIODOSBANK/*</pattern>
+      </match>
+      <structured86>1</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="United Overseas Bank" format="CSV" id="UOVBSGSG-CSV">
+    <script>UnitedOverseasSG-CSV.vbs</script>
+    <region>sg</region>
+  </bankscript>
+  <bankscript name="Van Lanschot" format="MT940" id="FVLBNL22-MT940">
+    <script>Van Lanschot.vbs</script>
+    <region>nl</region>
+    <section name="FVLBNL22">
+      <match>
+        <lines>5</lines>
+        <pattern>:25:FVLBNL00*</pattern>
+      </match>
+      <structured86>1</structured86>
+      <skipemptymemofields>1</skipemptymemofields>
+    </section>
+  </bankscript>
+  <bankscript name="Visa (nl)" format="Web" id="VISANLZZ-Web">
+    <script>VisaNL.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="ICS Visa (nl) copy text from PDF" format="Text" id="VISANLZZ-TXT">
+    <script>ICSVisaNL-PDFClip.vbs</script>
+    <region>nl</region>
+  </bankscript>
+  <bankscript name="Volksbank (at)" format="CSV" id="VOINATW1-CSV">
+    <script>VolksbankAT-CSV.vbs</script>
+    <region>at</region>
+  </bankscript>
+  <bankscript name="Volksbank (de)" format="CSV" id="GENODE61-CSV">
+    <script>VolksbankDE-CSV.vbs</script>
+    <region>de</region>
+  </bankscript>
+  <bankscript name="WayneCounty-CSV.vbs" format="CSV" id="WayneCounty-CSV">
+    <script>WayneCounty-CSV.vbs</script>
+    <region>us</region>
+  </bankscript>
+  <bankscript name="Zürcher Kantonalbank" format="MT940" id="ZKBKCHZZ-MT940">
+    <script>ZuercherKantonalBankCH-MT940.vbs</script>
+    <region>ch</region>
+    <section name="ZKBKCHZZ">
+      <match>
+        <lines>6</lines>
+        <pattern>23Privatkonto</pattern>
+      </match>
+      <match>
+        <lines>1</lines>
+        <pattern>{1:F01ZKBKCHZZ*</pattern>
+      </match>
+      <structured86>0</structured86>
+      <skipemptymemofields>0</skipemptymemofields>
+    </section>
+  </bankscript>
+  <region id="zz" en="Worldwide" fr="Mondial" du="Wereldwijd" ge="Weltweit" />
+  <region id="gb" en="United Kingdom" fr="Royaume-Uni" du="Verenigd Koninkrijk" ge="Vereinigtes Königreich" />
+  <region id="gg" en="Guernsey" fr="Guernesey" du="Guernsey" ge="Guernsey" />
+  <region id="fr" en="France" fr="France" du="Frankrijk" ge="Frankreich" />
+  <region id="be" en="Belgium" fr="Belgique" du="België" ge="Belgien" />
+  <region id="de" en="Germany" fr="Allemagne" du="Duitsland" ge="Deutschland" />
+  <region id="es" en="Spain" fr="Espagne" du="Spanje" ge="Spanien" />
+  <region id="ch" en="Switzerland" fr="Suisse" du="Zwitserland" ge="Schweiz" />
+  <region id="it" en="Italy" fr="Italie" du="Italie" ge="Italien" />
+  <region id="ca" en="Canada" fr="Canada" du="Canada" ge="Kanada" />
+  <region id="se" en="Sweden" fr="Suède" du="Zweden" ge="Schweden" />
+  <region id="at" en="Austria" fr="Autriche" du="Oostenrijk" ge="Österreich" />
+  <region id="sg" en="Singapore" fr="Singapour" du="Singapore" ge="Singapur" />
+  <region id="us" en="United States" fr="États-Unis" du="Verenigde Staten" ge="Vereinigte Staaten" />
+  <region id="dk" en="Denmark" fr="Danemark" du="Denemarken" ge="Dänemark" />
+  <region id="th" en="Thailand" fr="Thailand" du="Thailand" ge="Thailand" />
+  <region id="no" en="Norway" fr="Norvège" du="Noorwegen" ge="Norwegen" />
+  <region id="il" en="Israel" fr="Israel" du="Israël" ge="Israel" />
+  <region id="--" en="(All Scripts)" fr="(Tous les scripts)" du="(Alle Scripts)" ge="(Alle Skripts)" />
+  <region id="nl" en="Netherlands" fr="Pays-Bas" du="Nederland" ge="Niederlande" />
+  <region id="co" en="Colombia" fr="Colombie" du="Colombië" ge="Kolombien" />
+  <region id="ee" en="Estonia" fr="Estonie" du="Estland" ge="Estland" />
+  <region id="in" en="India" fr="Inde" du="India" ge="India" />
+  <region id="jp" en="Japan" fr="Japon" du="Japan" ge="Japan" />
+  <region id="pl" en="Poland" fr="Pologne" du="Polen" ge="Polen" />
+  <region id="gh" en="Ghana" fr="Ghana" du="Ghana" ge="Ghana" />
+  <region id="im" en="Isle of Man" fr="Ile de Man" du="Eiland Man" ge="Isle of Man" />
+  <language>en</language>
+  <language>fr</language>
+  <language>du</language>
+  <language>ge</language>
+</mt2ofx>

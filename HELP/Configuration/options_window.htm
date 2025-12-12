@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="In Progress" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="Options_Window" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>Options Window</title>
+<link rel="StyleSheet" href="../mt2ofx.css" type="text/css" />
+</head>
+<body>
+<?rh-region_start type="header" style="width: 100%; position: relative;" ?>
+<table cellspacing="0" width="100%">
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<tr style="vertical-align: top;">
+<td style="width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic; color: #0000ff;">MT2OFX V3.5 Help</p>
+</td>
+<td style="width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">&#160;</p>
+</td>
+<td style="width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: right; font-style: italic; color: #0000ff;"><?rh-variable_start 
+                         name="date" value="40714.018275" ?>2011-06-21<?rh-variable_end ?></p>
+</td>
+</tr>
+</table>
+<?rh-region_end type="header" ?>
+<h1>MT2OFX <?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                                 value="Options Window" ?>Options Window<?rh-variable_end ?></h1>
+<p>The options window is where the basic program configuration is defined. Click on an item in the picture below to learn more about it.</p>
+<p style="text-align: center;">&#160;</p>
+<p style="text-align: center;"><img src="../frmOptions.gif" usemap="#MAP216250884" alt="" style="border: none;" width="375" height="613" border="0" /> <map name="MAP216250884" id="MAP216250884">
+<area shape="rect" coords="9, 579, 87, 604" href="MT940_Bank_Options_Window.htm" title="Go to MT940 Bank Options Window" alt="" />
+<area shape="rect" coords="91, 580, 165, 603" href="Text_Input_Auto_Recognition_Window.htm" title="Go To Text Input Auto Recognition Window" alt="" />
+<area shape="rect" coords="3, 55, 357, 85" title="Prompt for output filename" href="#Save_output" alt="" />
+<area shape="rect" coords="4, 33, 229, 56" title="Show Open Dialog on startup" href="#Show_Open_Dialog_on_startup" alt="" />
+<area shape="rect" coords="5, 210, 331, 236" href="#Book_Date" title="Book date configuration" alt="" />
+<area shape="rect" coords="86, 98, 262, 129" href="#Start_import_after_conversion" alt="" />
+<area shape="rect" coords="4, 126, 290, 151" href="#Compress_multiple_spaces_in_payee_and_memo" title="Compress multiple spaces in payee and memo fields" alt="" />
+<area shape="rect" coords="3, 237, 255, 261" href="#OutputFileType" alt="" />
+<area shape="rect" coords="6, 283, 235, 310" href="#MemoDelimiter" alt="" />
+<area shape="rect" coords="4, 309, 366, 332" href="#PayeeCase" alt="" />
+<area shape="rect" coords="3, 330, 366, 357" href="#QIF DateFormat" alt="" />
+<area shape="rect" coords="5, 379, 366, 407" href="#DecimalSeparator" alt="" />
+<area shape="rect" coords="4, 452, 335, 478" href="#Script Editor" alt="" />
+<area shape="rect" coords="335, 448, 368, 478" href="#Script Editor" alt="" />
+<area shape="rect" coords="4, 477, 365, 498" href="#MT940_File_Extensions" alt="" />
+<area shape="rect" coords="4, 499, 364, 524" href="#Text_File_Extensions" alt="" />
+<area shape="rect" coords="70, 547, 303, 575" href="Payee_Mapping_Window.htm" alt="" />
+<area shape="rect" coords="3, 523, 366, 547" href="#DefaultPayeeName" alt="" />
+<area shape="rect" coords="3, 148, 203, 168" href="#GenCheckNum" alt="" />
+<area shape="rect" coords="4, 260, 256, 282" href="#OFX_Version" alt="" />
+<area shape="rect" coords="3, 84, 245, 104" alt="" />
+<area shape="rect" coords="6, 404, 268, 429" href="#No_Account_Header" alt="" />
+<area shape="rect" coords="5, 428, 293, 453" href="#QIF_Maximum_Memo_Length" alt="" />
+<area shape="rect" coords="2, 164, 216, 181" href="#NoSort" alt="" />
+<area shape="rect" coords="3, 181, 139, 202" href="#SkipEmptyStatements" alt="" />
+<area shape="rect" coords="5, 355, 367, 379" href="#CustomDateFormat" alt="" /></map></p>
+<p>&#160;</p>
+<p>If you have modified any of the options on this screen, click on <span style="font-weight: bold;">OK</span> to save the state of the program options (see below).</p>
+<p>&#160;</p>
+<p>The program has many options which affect its behaviour. All options are configurable from <a href="INIfile_Reference/MT2OFX.INI.htm">MT2OFX.INI</a>; some useful options can be selected in this window before the program actually does its work. When MT2OFX starts, this window displays the options selected in <a href="INIfile_Reference/MT2OFX.INI.htm">MT2OFX.INI</a>. If you change the options in this window, the changes can be saved back to <a href="INIfile_Reference/MT2OFX.INI.htm">MT2OFX.INI</a> by clicking on <span style="font-weight: bold;">OK</span>.</p>
+<p>&#160;</p>
+<p>The program options which are selectable here are as follows.</p>
+<p>&#160;</p>
+<p><a name="Show_Open_Dialog_on_startup" id="Show_Open_Dialog_on_startup"></a>If <span style="font-weight: bold;">Show Open Dialog on startup</span> is checked, you will be prompted to select an input file as soon as the program starts, as if you had clicked on the "Browse" button in the main window.</p>
+<p>&#160;</p>
+<p><a name="Start_import_after_conversion" id="Start_import_after_conversion"></a>If <span style="font-weight: bold;">Start import after conversion</span> is checked, then the output file will be passed to the program which has been configured in Windows to handle that type of files. For example, if you use Microsoft Money, OFX files are associated with mnyimprt.exe. If this option is not checked, the import will not be started automatically, but a dialog will be displayed which allows you to choose whether or not to import the file at this time.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;"><a name="Save_output" id="Save_output"></a>The</span> Save output: <span style="font-weight: normal;">setting determines where the result of the conversion is stored. The choices are as follows:</span></p>
+<p><span style="font-style: italic;">Ask - for each file processed</span> - before the conversion takes place you will be presented with a Save As dialog, allowing you to choose the name and location of the output file.</p>
+<p style="font-style: italic;">Automatic - same directory as input <span style="font-style: normal;">- the output file will be saved under the same name as the input, with the extension set to the configured <a href="#OutputFileType">Default Output Type</a>.</span></p>
+<p style="font-style: italic;">Temporary - deleted after use <span style="font-style: normal;">- the output will be created in a temporary file, with the extension set to the configured <a href="#OutputFileType">Default Output Type</a>. After the output file has been "imported" into your financial software, the temporary file will be deleted.</span></p>
+<p>&#160;</p>
+<p><a name="Save_Clipboard_Output" id="Save_Clipboard_Output"></a>Checking the <span style="font-weight: bold;">Save output from Clipboard conversion</span> option will save allow you to save the result of a conversion of data from the clipboard. You will be presented with a Save As dialog, allowing you to choose the name and location of the output file. When this option is unchecked, the output from clipboard conversion is saved in a temporary directory and deleted after import.</p>
+<p>&#160;</p>
+<p><a name="Compress_multiple_spaces_in_payee_and_memo" id="Compress_multiple_spaces_in_payee_and_memo"></a>If <span style="font-weight: bold;">Compress multiple spaces in payee and memo</span> is checked, multiple consecutive spaces in the Payee and Memo fields will be replaced by a single space. This will tend to make these values more easily readable.</p>
+<p>&#160;</p>
+<p><a name="GenCheckNum" id="GenCheckNum"></a>As from version 3.1, MT2OFX will not normally generate a cheque number automatically if the processing script fails to provide one. Check <span style="font-weight: bold;">Always generate cheque number</span> to revert to the old behaviour, where a missing cheque number is filled in automatically by combining the last few characters of the statement identifier with a sequence number.</p>
+<p>&#160;</p>
+<p><a name="NoSort" id="NoSort"></a>Normally the transactions in the output file will be sorted into ascending date order. By checking <span style="font-weight: bold;">Do not sort transactions into date order</span> the transactions will be in the same order in the output file as they occur in the input file.</p>
+<p>&#160;</p>
+<p><a name="SkipEmptyStatements" id="SkipEmptyStatements"></a>By checking <span style="font-weight: bold;">Skip Empty Statements</span> MT2OFX will ignore statements which contain no transactions.</p>
+<p>&#160;</p>
+<p><a name="Book_Date" id="Book_Date"></a>Microsoft Money looks only at the so-called Book Date of a transaction, which is the date on which the transaction is processed by the bank. Other dates are associated with a transaction, including the Value Date (which is used in interest calculations) and the actual date of the transaction. If you prefer to see one of the other dates in Microsoft Money, you can select it by using the <span style="font-weight: bold;">Use &lt;date&gt; as book date</span> selection.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><a name="OutputFileType" id="OutputFileType"></a>OutputFileType</span> defines the default file extension of the output file, and hence the data format (OFC, OFX or QIF). &#160;If you use Quicken, use QIF; for other programs, use OFX, OFC or QIF. All file extensions are OFX formatted, except for OFC and QIF. It is this extension which is used when MT2OFX is run invisibly having been associated in Windows with an input file type.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><a name="OFX_Version" id="OFX_Version"></a>OFX Version</span> allows selection of the version of the OFX specification which is used in OFX output files. Normally there is no need to change the default (102), but if you have a need, the version can be set to 102, 151, 160 or 201, which are the published versions of the OFX Specification.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><a name="MemoDelimiter" id="MemoDelimiter"></a>MemoDelimiter</span> defines the character which is used to separate data from different fields or different lines in the transaction description. OFX and most financial software allow only a single line of text, whereas the original MT940 format supports multiple lines of text.</p>
+<p>&#160;</p>
+<p><a name="PayeeCase" id="PayeeCase"></a>The <span style="font-weight: bold;">PayeeCase</span> setting affects the presentation of the payee name. Most banks only use upper case in downloaded statements.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><a name="QIF DateFormat"></a>QIF DateFormat</span> represents the format of dates in the QIF output. Some programs require US-format dates, others require European dates or are more flexible. A <a href="#CustomDateFormat">custom format</a> can also be used.</p>
+<p>&#160;</p>
+<p><a name="CustomDateFormat" id="CustomDateFormat"></a>If the QIF date format is set to "Custom", the format to be used can be entered in <span style="font-weight: bold;">QIF Custom Date Format</span>.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="DecimalSeparator" id="DecimalSeparator"></a>QIF Decimal Separator <span style="font-weight: normal;">defines the character which is used as the decimal separator in amounts output in a QIF file.</span></p>
+<p>&#160;</p>
+<p><a name="No_Account_Header" id="No_Account_Header"></a>If you check the <span style="font-weight: bold;">No !Account Header in QIF</span> option, MT2OFX will not add a header section in QIF output files which describes the account for the subsequent transactions. Microsoft Money cannot handle these headers and may require this option to be set. Other software may be able to use this header to route the transactions directly to the appropriate account.</p>
+<p>&#160;</p>
+<p><a name="QIF_Maximum_Memo_Length" id="QIF_Maximum_Memo_Length"></a>The option <span style="font-weight: bold;">QIF Maximum Memo Length</span> configures the number of characters allowed in the Memo field of QIF output. The field value will be truncated at this length. The default value of zero indicates that the Memo field will not be truncated.</p>
+<p>&#160;</p>
+<p><a name="Script Editor"></a>The <span style="font-weight: bold;">Script Editor</span> is the program which is launched to edit a script file when you click on the Edit button. Click on the folder icon to choose the program you would like to use for editing .vbs files.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="MT940_File_Extensions" id="MT940_File_Extensions"></a>MT940 File Extensions <span style="font-weight: normal;">contains a list of file extensions which are automatically assumed to contain MT940 data. Separate multiple values with commas, and do not include the "dot" before the extension. This information is also used when "MT940 Statement Files" in the "Browse" dialog.</span></p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Text_File_Extensions" id="Text_File_Extensions"></a>Text File Extensions <span style="font-weight: normal;">contains a list of file extensions which are automatically assumed to NOT contain MT940 data. Separate multiple values with commas, and do not include the "dot" before the extension. This information is also used when "Text Statement Files" in the "Browse" dialog.</span></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><a name="DefaultPayeeName" id="DefaultPayeeName"></a>Default Payee Name</span> is the string which is used as the payee name in the output file when the processing script does not provide a payee for a transaction.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-region_start type="footer" style="width: 100%; position: relative;" ?>
+<p style="font-style: italic; color: #0000ff;"><?rh-symbol_start name="Copyright" ?>©<?rh-symbol_end ?> Colin Smale 2003-2006. All rights reserved.</p>
+<?rh-region_end type="footer" ?>
+</body>
+</html>

@@ -1,0 +1,1 @@
+CScript MakeInstaller.vbs

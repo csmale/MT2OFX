@@ -1,0 +1,1 @@
+msgbox "True=" & cstr(cint(true)) & ", False=" & cstr(cint(false))

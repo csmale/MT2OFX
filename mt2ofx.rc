@@ -1,0 +1,818 @@
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+101, 	"MT940 Statement Files"
+102, 	"Select Output File"
+103, 	"Open MT940 Statment File"
+104, 	"OFC Files (*.OFC)|*.OFC|OFX Files (*.OFX)|*.OFX|Quicken QFX Files (*.QFX)|*.QFX|Quicken Interchange Files (*.QIF)|*.QIF|All Files|*.*"
+105, 	"Book Date (standard)"
+106, 	"Value Date"
+107, 	"Transaction Date"
+108, 	"Unable to load settings!"
+109, 	"Unable to save settings!"
+110, 	"Conversion complete, starting import"
+111, 	"Conversion complete!"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+112, 	"Unable to start import, program=%2, params=%3\\n\\n%4  (%1)"
+113, 	"Unable to process '%1'"
+114, 	"Unable to open '%1': %2"
+115, 	"Unable to identify bank in '%1'"
+116, 	"Unable to load settings for bank '%1'"
+117, 	"Error processing transaction"
+118, 	"Processing aborted."
+119, 	"Error in script '%1': procedure '%2' should have %3 parameter(s)."
+120, 	"As input"
+121, 	"UPPER CASE"
+122, 	"lower case"
+123, 	"Proper Case"
+124, 	"dd/mm/yyyy"
+125, 	"mm/dd/yyyy"
+126, 	"Warning - match rule refers to undefined bank!"
+127, 	"Really delete this bank rule?"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+128, 	"There is no program associated with the file extension '%1'. Import aborted."
+129, 	"Really delete this match script entry? The script file itself will not be deleted."
+130, 	"Really delete this extension mapping?"
+131, 	"An error occurred while starting the script editing program: "
+132, 	"Save changes to this record?"
+133, 	"yyyy/mm/dd"
+134, 	"(System Setting)"
+135, 	"All Files"
+136, 	"Text Statement Files"
+137, 	". (Dot)"
+138, 	", (Comma)"
+139, 	"Custom - see below"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+150, 	"Processing input file..."
+151, 	"Writing output file..."
+152, 	"Counting transactions..."
+153, 	"Reading MT940 file..."
+154, 	"Sorting transactions..."
+155, 	"Another copy of MT2OFX is already running."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+500, 	"Your version of %1 (%2) is too old. The file has version %3; MT2OFX requires a minimum of %4."
+501, 	"Script does not have any adjustable parameters."
+502, 	"Script has no About-information."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+550, 	"Choose Bank Processing Script"
+551, 	"VBScript files (*.vbs)|*.vbs"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1000, 	"MT2OFX - V%1"
+1001, 	"Help..."
+1002, 	"Browse..."
+1003, 	"Convert!"
+1004, 	"Close"
+1005, 	"Save settings"
+1007, 	"Use"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1008, 	"About..."
+1011, 	"Options..."
+1012, 	"From Clipboard"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1100, 	"Unknown bank"
+1101, 	"MT2OFX has been unable to recognise the format of the file \"%1\"."
+1102, 	"It is possible to configure MT2OFX to work with other banks' download files. To find out more about this process, please click on \"More Info\"."
+1103, 	"More Info..."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1104, 	"OK"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1150, 	"New Bank"
+1151, 	"Bank Code (BIC)"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1152, 	"Bank Name"
+1153, 	"To search for your bank's BIC, you can use this website:"
+1154, 	"OK"
+1155, 	"Cancel"
+1156, 	"Bank code already exists. Please choose a new code."
+1157, 	"New Bank"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1200, 	"MT2OFX Options"
+1201, 	"Show Open Dialog on startup"
+1202, 	"Post-conversion actions"
+1203, 	"Save output:"
+1204, 	"Compress multiple spaces in payee and memo"
+1205, 	"will be used as book date"
+1206, 	"Default output file type"
+1207, 	"Memo separator character"
+1208, 	"Payee case"
+1209, 	"MT940..."
+1210, 	"Cancel"
+1211, 	"OK"
+1212, 	"QIF Date Format"
+1213, 	"Scripts..."
+1214, 	"MT940 File Extensions"
+1215, 	"Text File Extensions"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1216, 	"Close"
+1217, 	"Payee Replacement..."
+1218, 	"Script Editor Program"
+1219, 	"Applications (*.exe)|*.exe|All Files (*.*)|*.*"
+1220, 	"Always generate cheque number"
+1221, 	"Default Payee Name"
+1222, 	"OFX Version"
+1223, 	"Memo separator character"
+1224, 	"QIF Decimal Separator"
+1225, 	"No !Account header in QIF"
+1226, 	"Automatic - same directory as input"
+1227, 	"Ask - for each file processed"
+1228, 	"Temporary - deleted after use"
+1229, 	"Save output from Clipboard conversion"
+1230, 	"QIF Maximum Memo Length"
+1231, 	"Do not sort transactions into date order"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1232, 	"QIF Custom Date Format"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1250, 	"New File Extension Map"
+1251, 	"Extension:"
+1252, 	"Cancel"
+1253, 	"OK"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1300, 	"MT2OFX Text Input Scripts"
+1301, 	"Cancel"
+1302, 	"OK"
+1303, 	"Move Up"
+1304, 	"Move Down"
+1305, 	"New"
+1306, 	"Remove"
+1307, 	"Update"
+1308, 	"Reset"
+1309, 	"Edit"
+1310, 	"Script Name"
+1311, 	"#|Script"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1312, 	"File Extensions"
+1313, 	"A text input file will be offered to these scripts in the order they appear in below. It will be processed by the first active script which recognises the file. Activate or deactivate the scripts with the checkboxes."
+1314, 	"About..."
+1315, 	"Parameters..."
+1316, 	"Close"
+1317, 	"Extension %1 is assigned to more than one script, including %2 and %3. Please correct this before saving."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1350, 	"Output Programs"
+1351, 	"Output File Type:"
+1352, 	"Do nothing"
+1353, 	"Open it with the program configured in Windows"
+1354, 	"Open it with the following program:"
+1355, 	"OK"
+1356, 	"Cancel"
+1357, 	"Extensions which will automatically select this script without going through the recognition process:"
+1358, 	"Separate extensions with commas."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1400, 	"MT2OFX MT940 Bank Options"
+1401, 	"Close"
+1402, 	"New..."
+1403, 	"Remove"
+1404, 	"Update"
+1405, 	"Reset"
+1406, 	"Bank Name:"
+1407, 	"Processing script file:"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1408, 	"Use structured :86: records"
+1409, 	"Ignore empty description fields"
+1410, 	"Edit"
+1411, 	"Matching..."
+1412, 	"Bank Properties"
+1414, 	"Delete Bank"
+1415, 	"Cannot delete this bank as it is used in one or more matching rules."
+1416, 	"Are you absolutely sure you want to delete the bank \"%1\"?"
+1417, 	"BIC|Bank Name"
+1418, 	"About..."
+1419, 	"Settings..."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1500, 	"MT2OFX Text Input File Extension Mapping"
+1501, 	"File extensions which link non-MT940 files directly to an input script:"
+1502, 	"New"
+1503, 	"Delete"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1504, 	"Update"
+1505, 	"Reset"
+1506, 	"Close"
+1507, 	"Extension Mapping"
+1508, 	"Processing Script File:"
+1509, 	"Edit"
+1510, 	"Auto-Recognition"
+1511, 	"Extn|Script"
+1512, 	"About..."
+1513, 	"Parameters..."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1600, 	"MT2OFX MT940 Bank Matching"
+1601, 	"#|Lines|Pattern|Bank"
+1602, 	"Move Up"
+1603, 	"Move Down"
+1604, 	"New"
+1605, 	"Remove"
+1606, 	"Match Rule"
+1607, 	"Match pattern:"
+1608, 	"Within:"
+1609, 	"Bank Configuration:"
+1610, 	"Update"
+1611, 	"Reset"
+1612, 	"Cancel"
+1613, 	"OK"
+1614, 	"Lines"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1700, 	"Payee Mapping"
+1701, 	"Pattern|Field|Replacement|Category|SIC|Cont?"
+1702, 	"Move Up"
+1703, 	"Move Down"
+1704, 	"Remove"
+1705, 	"Add"
+1706, 	"Payee Mapping Rule"
+1707, 	"If the:"
+1708, 	"Set the payee to:"
+1709, 	"Set the category to:"
+1710, 	"Update"
+1711, 	"Reset"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1712, 	"Cancel"
+1713, 	"Save && Close"
+1714, 	"Use case-insensitive matching"
+1715, 	"Test"
+1716, 	"Test payee:"
+1717, 	"Result from this rule:"
+1718, 	"Result all rules:"
+1719, 	"Pattern contains syntax error(s). Accept anyway?"
+1720, 	"Invalid pattern"
+1721, 	"<No match found>"
+1722, 	"<Invalid pattern>"
+1723, 	"Help with patterns..."
+1724, 	"Pattern Helper"
+1725, 	"Special Chars"
+1726, 	"Letter"
+1727, 	"Digit"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1728, 	"Alphanumeric"
+1729, 	"White space"
+1730, 	"Any character"
+1731, 	"Set"
+1732, 	"NOT in set"
+1733, 	"How Many?"
+1734, 	"One"
+1735, 	"Zero or one"
+1736, 	"Zero or more"
+1737, 	"One or more"
+1738, 	"Between"
+1739, 	"and"
+1740, 	"Insert Text"
+1741, 	"Capture"
+1742, 	"starts with"
+1743, 	"contains"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1744, 	"matches"
+1745, 	"Payee"
+1746, 	"Memo"
+1747, 	"Test memo:"
+1748, 	"SIC:"
+1749, 	"Continue to next rule"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1800, 	"Script Properties"
+1801, 	"Properties for %1"
+1802, 	"OK"
+1803, 	"Cancel"
+1804, 	"Setting|Value"
+1805, 	"Property Value"
+1806, 	"Description:"
+1807, 	"Value:"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+1808, 	"Update"
+1809, 	"Reset"
+1810, 	"Close"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+2101, 	"MT940 Afschriftbestanden"
+2102, 	"Uitvoerbestand Selecteren"
+2103, 	"Openen MT940 Afschriftbestand"
+2104, 	"OFC-bestanden (*.OFC)|*.OFC|OFX-bestanden (*.OFX)|*.OFX|Quicken QFX-bestanden (*.QFX)|*.QFX|Quicken Interchange-bestanden (*.QIF)|*.QIF|Alle bestanden|*.*"
+2105, 	"Boekdatum (standaard)"
+2106, 	"Valutadatum"
+2107, 	"Transactiedatum"
+2108, 	"Kan instellingen niet laden!"
+2109, 	"Kan instellingen niet opslaan!"
+2110, 	"Conversie voltooid, import wordt gestart"
+2111, 	"Conversie voltooid!"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+2112, 	"Starten import mislukt, foutcode=%1"
+2113, 	"Verwerken bestand '%1' mislukt!"
+2114, 	"Kan bestand '%1' niet openen: %2"
+2115, 	"Bank kan niet worden geidentificeerd in '%1'"
+2116, 	"Instellingen voor bank '%1' kunnen niet worden geladen."
+2117, 	"Fout bij het verwerken van een transactie"
+2118, 	"Verwerking afgebroken."
+2119, 	"Fout in script '%1': procedure '%2' zou %3 parameters moeten hebben."
+2120, 	"Van invoer"
+2121, 	"HOOFDLETTERS"
+2122, 	"kleine letters"
+2123, 	"Kapitaliseren"
+2124, 	"dd/mm/jjjj"
+2125, 	"mm/dd/jjjj"
+2126, 	"Waarschuwing - sjabloon verwijst naar ongedefineerde bank!"
+2127, 	"Deze sjabloonregel echt verwijderen?"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+2128, 	"Er is geen programma geassocieerd met bestandsextensie '%1'. Import afgebroken."
+2129, 	"Deze matchscriptingang echt verwijderen? Het scriptbestand zelf wordt niet verwijderd."
+2130, 	"Deze extensiekoppeling echt verwijderen?"
+2131, 	"Scriptbewerkingsprogramma kon niet worden gestart: "
+2132, 	"Wijzigingen aan dit record opslaan?"
+2133, 	"jjjj/mm/dd"
+2134, 	"(Systeeminstelling)"
+2135, 	"Alle Bestanden"
+2136, 	"Tekstafschriftbestanden"
+2137, 	". (Punt)"
+2138, 	", (Komma)"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+2500, 	"Uw versie van %1 (%2) is te oud. Het bestand heeft versie %3; MT2OFX vereist minimaal versie %4."
+2501, 	"Script heeft geen instelbare parameters."
+2502, 	"Script heeft geen omschrijving."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3000, 	"MT2OFX - V%1"
+3001, 	"Help..."
+3002, 	"Bladeren..."
+3003, 	"Converteer!"
+3004, 	"Sluiten"
+3005, 	"Instellingen opslaan"
+3007, 	"Gebruik"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3008, 	"Info..."
+3011, 	"Opties..."
+3012, 	"Van Klembord"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3100, 	"Onbekende bank"
+3101, 	"MT2OFX kon het formaat van het bestand \"%1\" niet herkennen."
+3102, 	"Het is mogelijk om MT2OFX te laten werken met download-bestanden van andere banken. Om meer te weten te komen over dit proces, klik op \"More Info\"."
+3103, 	"Meer Info..."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3104, 	"OK"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3150, 	"Nieuwe Bank"
+3151, 	"Bankcode (BIC)"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3152, 	"Banknaam"
+3153, 	"Om naar de BIC van uw bank te zoeken, kunt u deze website gebruiken:"
+3154, 	"OK"
+3155, 	"Annuleren"
+3156, 	"Deze bankcode bestaat al. Kies een andere code."
+3157, 	"Nieuwe Bank"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3200, 	"MT2OFX Opties"
+3201, 	"Toon Dialoog Openen bij starten"
+3202, 	"Acties na conversie"
+3203, 	"Uitvoer opslaan:"
+3204, 	"Meerdere spaties comprimeren"
+3205, 	"wordt gebruikt als boekdatum"
+3206, 	"Standaardtype uitvoerbestand"
+3207, 	"Scheidingsteken Memo"
+3208, 	"Formaat Begunstigde"
+3209, 	"MT940..."
+3210, 	"Annuleren"
+3211, 	"OK"
+3212, 	"QIF-Datumformaat"
+3213, 	"Scripts..."
+3214, 	"MT940-Bestandsextensies"
+3215, 	"Tekstbestandsextensies"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3216, 	"Sluiten"
+3217, 	"Vervangingsregels Begunstigden..."
+3218, 	"Scriptbewerkingsprogramma"
+3219, 	"Applicaties (*.exe)|*.exe|Alle Bestanden (*.*)|*.*"
+3220, 	"Altijd chequenummer genereren"
+3221, 	"Standaard-begunstigde"
+3222, 	"OFX-Versie"
+3223, 	"Scheidingsteken Memo"
+3224, 	"QIF-Decimaalteken"
+3225, 	"Geen !Account-header in QIF"
+3226, 	"Automatisch - dezelfde map als invoer"
+3227, 	"Vragen - voor ieder invoerbestand"
+3228, 	"Tijdelijk - wordt na gebruik verwijderd"
+3229, 	"Resultaat van Klembord-conversie opslaan"
+3230, 	"QIF Maximum Memolengte"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3250, 	"Nieuwe Bestandsextensie"
+3251, 	"Extensie:"
+3252, 	"Annuleren"
+3253, 	"OK"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3300, 	"MT2OFX Scripts voor Tekstbestanden"
+3301, 	"Annuleren"
+3302, 	"OK"
+3303, 	"Omhoog"
+3304, 	"Omlaag"
+3305, 	"Nieuw"
+3306, 	"Verwijderen"
+3307, 	"Bijwerken"
+3308, 	"Herstel"
+3309, 	"Bewerken"
+3310, 	"Scriptnaam"
+3311, 	"#|Script"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3312, 	"Bestandsextensies"
+3313, 	"Een invoerbestand wordt aan deze scripts aangeboden in de volgorde waarin ze hieronder staan. Het bestand wordt verwerkt door het eerste actieve script dat het herkent. Activeer of deactiveer een script met de checkboxes."
+3314, 	"Info..."
+3315, 	"Parameters..."
+3316, 	"Sluiten"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3350, 	"Vervolgprogramma's"
+3351, 	"Bestandstype uitvoer:"
+3352, 	"Doe niets"
+3353, 	"Openen met het in Windows geconfigureerde programma"
+3354, 	"Openen met het volgende programma:"
+3355, 	"OK"
+3356, 	"Annuleren"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3400, 	"MT2OFX MT940 Bankopties"
+3401, 	"Sluiten"
+3402, 	"Nieuw..."
+3403, 	"Verwijderen"
+3404, 	"Bijwerken"
+3405, 	"Herstel"
+3406, 	"Banknaam:"
+3407, 	"Verwerkingsscript:"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3408, 	"Gestructureerde :86:-regels"
+3409, 	"Lege beschrijvingsvelden overslaan"
+3410, 	"Bewerken"
+3411, 	"Herkenning..."
+3412, 	"Eigenschappen Bank"
+3414, 	"Bank Verwijderen"
+3415, 	"Deze bank kan niet verwijderd worden omdat zij in ÈÈn of meerdere matchingregels gebruikt wordt."
+3416, 	"Weet u zeker dat u bank \"%1\" wilt verwijderen?"
+3417, 	"BIC|Banknaam"
+3418, 	"Info..."
+3419, 	"Parameters..."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3500, 	"MT2OFX Extensiekoppelingen Tekstbestanden"
+3501, 	"Extensies van niet-MT940 bestanden die direct aan een script gekoppeld worden:"
+3502, 	"Nieuw..."
+3503, 	"Verwijderen"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3504, 	"Bijwerken"
+3505, 	"Herstellen"
+3506, 	"Sluiten"
+3507, 	"Extensiekoppeling"
+3508, 	"Verwerkingsscript:"
+3509, 	"Bewerken"
+3510, 	"Auto-Recognition"
+3511, 	"Extn|Script"
+3512, 	"Info..."
+3513, 	"Parameters..."
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3600, 	"MT2OFX MT940 Bankherkenning"
+3601, 	"#|Regels|Patroon|Bank"
+3602, 	"Omhoog"
+3603, 	"Omlaag"
+3604, 	"Nieuw"
+3605, 	"Verwijderen"
+3606, 	"Herkenningsregel"
+3607, 	"Patroon:"
+3608, 	"Binnen:"
+3609, 	"Bankconfiguratie:"
+3610, 	"Bijwerken"
+3611, 	"Herstel"
+3612, 	"Annuleren"
+3613, 	"OK"
+3614, 	"Regels"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3700, 	"Vervangingsregels Begunstigden"
+3701, 	"Sjabloon|Veld|Vervangen door|Categorie"
+3702, 	"Omhoog"
+3703, 	"Omlaag"
+3704, 	"Verwijderen"
+3705, 	"Nieuw"
+3706, 	"Vervangingsregel"
+3707, 	"Als het veld:"
+3708, 	"Gebruik begunstigde:"
+3709, 	"Gebruik categorie:"
+3710, 	"Bijwerken"
+3711, 	"Herstel"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3712, 	"Annuleren"
+3713, 	"Opslaan"
+3714, 	"Ongevoelig voor verschillen tussen kleine letters en hoofdletters"
+3715, 	"Testen"
+3716, 	"Test-begunstigde:"
+3717, 	"Resultaat deze regel:"
+3718, 	"Resultaat alle regels:"
+3719, 	"Sjabloon bevat syntaxfout(en). Toch zo opslaan?"
+3720, 	"Ongeldig sjabloon"
+3721, 	"<Geen match gevonden>"
+3722, 	"<Fout in sjabloon>"
+3723, 	"Hulp met sjablonen..."
+3724, 	"Sjabloonhulp"
+3725, 	"Speciale Tekens"
+3726, 	"Letter"
+3727, 	"Cijfer"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3728, 	"Letter of cijfer"
+3729, 	"Witruimte"
+3730, 	"Ieder teken"
+3731, 	"Verzameling"
+3732, 	"NIET in verz."
+3733, 	"Hoe veel?"
+3734, 	"…Èn"
+3735, 	"Nul of meer"
+3736, 	"Nul of een"
+3737, 	"…Èn of meer"
+3738, 	"Tussen:"
+3739, 	"en"
+3740, 	"Tekst Invoegen"
+3741, 	"Onthouden"
+3742, 	"begint met"
+3743, 	"bevat"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3744, 	"matcht"
+3745, 	"Begunstigde"
+3746, 	"Memo"
+3747, 	"Test-memo:"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3800, 	"Scriptparameters"
+3801, 	"Parameters voor %1"
+3802, 	"OK"
+3803, 	"Annuleren"
+3804, 	"Parameter|Waarde"
+3805, 	"Parameterwaarde"
+3806, 	"Omschrijving:"
+3807, 	"Waarde:"
+}
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+3808, 	"Bijwerken"
+3809, 	"Herstel"
+3810, 	"Sluiten"
+}
+

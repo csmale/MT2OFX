@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="Ready for Review" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>[SpecialPayeeNames] Section</title>
+<link rel="StyleSheet" href="../../mt2ofx.css" type="text/css" />
+<script language="javascript" src="../../ehlpdhtm.js" type="text/javascript">
+</script>
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="[SpecialPayeeNames] Section" ?>[SpecialPayeeNames] Section<?rh-variable_end ?></h1>
+<p>&#160;</p>
+<p>SpecialPayeeNames is only used for ABN AMRO and has been superceded by the PayeeMap functionality.</p>
+<p>&#160;</p>
+<p>The section is used to provide "Payee" names for transactions which by their nature do not have one. For example, cash withdrawals, bank charges and card costs do not have a "Payee" in the normal sense.</p>
+<p>&#160;</p>
+<p>The reason for wanting to derive a "Payee" for these transactions, is that software such as Microsoft Money displays the payee prominently to allow you to identify the transaction. Seeing your own name or the name of your bank is not always helpful to you; hence this facility.</p>
+<p>&#160;</p>
+<p>Each transaction has its memo field checked against the patterns defined here. On the first match, the payee string associated with the matching pattern is selected and used as the "Payee". Comparisons are case-insensitive and are deemed to begin at the start of the memo string.</p>
+<p>&#160;</p>
+<p>In the following example, a transaction with a memo field of "Chipknip 10 Juli" will be given a payee of "Electronic Purse".</p>
+<p>&#160;</p>
+<p>[SpecialPayeeNames]</p>
+<p>Pattern1=GELDAUTOMAAT</p>
+<p>Payee1=Cash Withdrawal</p>
+<p>Pattern2=CHIPKNIP</p>
+<p>Payee2=Electronic Purse</p>
+<p>Pattern3=ELECTRONIC BANKING</p>
+<p>Payee3=Bank</p>
+<p>Pattern4=KOSTEN</p>
+<p>Payee4=Bank</p>
+<p>Pattern5=(JAAR)KOSTEN</p>
+<p>Payee5=Bank</p>
+<p>Pattern6=AFSLUITING PER</p>
+<p>Payee6=Interest</p>
+<p>Pattern7=RENTEAFSLUITING</p>
+<p>Payee7=Interest</p>
+<p>&#160;</p>
+<p><span style="font-style: italic;">Technical note:</span> The comparisons are performed with the Visual Basic "Like" operator. You can use a question mark ("?") to match any single character, or an asterisk ("*") to match any sequence of characters.</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

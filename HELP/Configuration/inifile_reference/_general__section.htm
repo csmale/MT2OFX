@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="template" content="MT2OFX.htt" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-status" content="Ready for Review" />
+<meta name="topic-priority" content="0" />
+<meta name="topic-time-estimate" content="0" />
+<meta name="topic-comment" content="" />
+<meta name="topic-id" content="" />
+<meta name="topic-check-list" content="Ran Smart Index" />
+<meta name="generator" content="Adobe RoboHelp 9" />
+<title>[General] Section</title>
+<link rel="StyleSheet" href="../../mt2ofx.css" type="text/css" />
+<script language="javascript" src="../../ehlpdhtm.js" type="text/javascript">
+</script>
+</head>
+<body>
+<?rh-placeholder type="header" ?>
+<h1><?rh-variable_start name="title" format="default" showcode="showcode" 
+                                                 value="[General] Section" ?>[General] Section<?rh-variable_end ?></h1>
+<p>&#160;</p>
+<p>In the [General] section of MT2OFX.INI, parameters can be configured which govern the overall operation of the program.</p>
+<p>&#160;</p>
+<h5><a name="MemoDelimiter" id="MemoDelimiter"></a>MemoDelimiter</h5>
+<p>Defines the character which is used to separate data from different fields or different lines in the transaction description. OFX and most financial software allow only a single line of text, whereas the original MT940 format supports multiple lines of text.</p>
+<h5><a name="OutputFileType" id="OutputFileType"></a>OutputFileType</h5>
+<p>Defines the file extension of the output file, and hence the data format (OFC, OFX or QIF). &#160;If you use Quicken, use QIF; for other programs, use OFX, OFC or QIF. All file extensions are OFX formatted, except for OFC and QIF.</p>
+<h5><a name="StartImportAfterConversion" id="StartImportAfterConversion"></a>StartImportAfterConversion</h5>
+<p>If this value is set to 1, the process of importing the resulting OFX/OFC file into the financial software is started automatically as soon as the conversion has finished. Otherwise the user is asked to confirm whether the import is to be started.</p>
+<h5><a name="ApplicationHomePage" id="ApplicationHomePage"></a>ApplicationHomePage</h5>
+<p>Defines the URL of the MT2OFX home page, which is displayed in the About dialog.</p>
+<h5><a name="PromptForOutput" id="PromptForOutput"></a>PromptForOutput</h5>
+<p>If this value is set to 1, the user is allowed to select the name for the output file (by means of a "Save As" dialog). Otherwise, the output file name is equal to the input file name, with the extension changed to the value of <a href="#OutputFileType">OutputFileType</a>.</p>
+<h5><a name="CompressSpaces" id="CompressSpaces"></a>CompressSpaces</h5>
+<p>If this value is set to 1, consecutive space characters in the Payee name and transaction description are replaced with a single space.</p>
+<h5><a name="PayeeCase" id="PayeeCase"></a>PayeeCase</h5>
+<p>This setting affects the presentation of the payee name. Most banks only use upper case in downloaded statements. This can appear a little overpowering.</p>
+<p>0=No change (default), 1=Upper Case, 2=Lower Case, 3=Proper Case</p>
+<h5><a name="AutoBrowse" id="AutoBrowse"></a>AutoBrowse</h5>
+<p>If this value is set to 1, a "File Open" dialog will be presented when the program is started in GUI mode. Otherwise, click the "Browse" button in the main window to select an input file.</p>
+<h5><a name="BookDateMode" id="BookDateMode"></a>BookDateMode</h5>
+<p>Microsoft Money, in common with many programs, uses only the Book Date of the transaction, and ignores the Value Date and the Transaction Date. This option allows you to configure which date is used in the Book Date field in the output file and thus which date is displayed.</p>
+<p>0=Book Date (Standard, default), 1=Value Date, 2=Transaction Date (if available, else Book Date)</p>
+<h5><a name="LogFile" id="LogFile"></a>LogFile</h5>
+<p>File to which a simple log is written. Default is no logging.</p>
+<h5><a name="TxnDumpFile" id="TxnDumpFile"></a>TxnDumpFile</h5>
+<p>File to which a dump is written of all statements and transaction data. Must be called from the processing script!</p>
+<h5><a name="ScriptTimeout" id="ScriptTimeout"></a>ScriptTimeout</h5>
+<p>Number of milliseconds to allow for a script function to complete. If the value -1 is specified, no timeout is used. When the value is 0, the timeout occurs as soon as it is determined that a running script is hung for any reason. Default is 5000 (equivalent to 5 seconds).</p>
+<h5><a name="GenerateCheckNum" id="GenerateCheckNum"></a>GenerateCheckNum</h5>
+<p>As from version 3.1, MT2OFX no longer invents a "cheque number" if one is not explicitly provided by the processing script. By setting this value to 1, the original behaviour can be restored. Default is 0 (new behaviour).</p>
+<h5><a name="EnableSounds" id="EnableSounds"></a>EnableSounds</h5>
+<p>&#160;</p>
+<h5><a name="TestPayee" id="TestPayee"></a>TestPayee</h5>
+<p>Text used as example payee in the Payee Mapping window for testing the payee matching rules.</p>
+<h5><a name="PayeeMapFile" id="PayeeMapFile"></a>PayeeMapFile</h5>
+<p>Name of the file containing the payee mapping information. Default is "PayeeMap.Dat".</p>
+<h5><a name="PayeeMapIgnoreCase" id="PayeeMapIgnoreCase"></a>PayeeMapIgnoreCase</h5>
+<p>If set to 1, the payee mapping process uses case-insensitive matching ("A" is considered equal to "a"). If set to 0, the matching is case-sensitive ("A" is different to "a"). Default is 0.</p>
+<h5><a name="DefaultPayee" id="DefaultPayee"></a>DefaultPayee</h5>
+<p>If a processing script does not provide a Payee Name for a transaction, this value is used in the output file. The OFX standard requires the payee name to be present and non-blank. Default is "*** Unknown ***".</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+</body>
+</html>

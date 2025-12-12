@@ -1,0 +1,184 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>Bank-Specific Configuration</title>
+
+<!--(Meta)==========================================================-->
+
+<meta name=template content=MT2OFX.htt>
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=780>
+<meta name=layout-width content=705>
+
+
+<!--(Links)=========================================================-->
+
+<link rel=StyleSheet href="../mt2ofx.css">
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<!--(Generated Script Links)========================================-->
+<!--(Generated Code)================================================-->
+<!--(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)==================-->
+<!--begin!kadov{{===================================================-->
+<script type="text/javascript"
+		language=JavaScript1.2
+		x-save-method=compute-relative
+		src="../ehlpdhtm.js"></script>
+<script type="text/javascript"
+		language=JavaScript1.2>
+<!-- 
+if( typeof( kadovFilePopupInit ) != 'function' ) kadovFilePopupInit = new Function();if( typeof( kadovTextPopupInit ) != 'function' ) kadovTextPopupInit = new Function();
+ //-->
+</script>
+
+<!--}}end!kadov=====================================================-->
+<!--(==============================================================)-->
+
+
+<!--(Resources)=====================================================-->
+<!--(Generated Code)================================================-->
+<!--(WARNING: DO NOT EDIT OR DELETE THIS SECTION!)==================-->
+
+<div class=x-popup-text id=POPUP418895695  style='display: none; position: absolute' >
+<!--kadov-resources-begin{{-->
+<p>SWIFT is a worldwide community of financial institutions whose purpose 
+ is to be the leader in communications solutions enabling interoperability 
+ between its members, their market infrastructures and their end-user communities.</p>
+<!--}}kadov-resources-end-->
+</div>
+
+<!--(End Resources)=================================================-->
+
+
+<!--kadov_tag{{<placeholder id="header">}}--><h1><!--kadov_tag{{<variable 
+ name=title
+	x-format=default
+	x-value="Bank-Specific Configuration">}}-->Bank-Specific Configuration<!--kadov_tag{{</variable>}}--></h1>
+
+<p>In spite of the fact that MT940 is a defined standard, banks use differing 
+ interpretations of the official standard which is controlled by SWIFT.</p>
+
+<p>&nbsp;</p>
+
+<p>Each bank identified in the <a href="_BankRules__Section.htm">[BankRules] 
+ Section</a>, needs to have its own section in which the specific treatment 
+ is defined.</p>
+
+<p>&nbsp;</p>
+
+<p>[<span style="font-style: italic;">bank</span>]</p>
+
+<p>BankName=<span style="font-style: italic;">bank_name</span></p>
+
+<p>Structured86=0</p>
+
+<p>FindPayee=ABNA_FindPayee</p>
+
+<p>FindTxnDate=ABNA_FindTxnDate</p>
+
+<p>FindServerTime=ABNA_FindServerTime</p>
+
+<p>IntuitBankID=00508</p>
+
+<p>ScriptFile=ABN Amro.vbs</p>
+
+<p>&nbsp;</p>
+
+<p><!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}--></p>
+
+<p>&nbsp;</p>
+
+<p># bank variant configuration. The section name must be equal to the 
+ bank name, which is matched</p>
+
+<p># against the rules given above. If an exact section name</p>
+
+<p># match is not found, the default is used which is defined under &quot;[*]&quot;.</p>
+
+<p># BankName: String (not currently used)</p>
+
+<p># Structured86: 1=the :86: record is structured as described in the</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a 
+ class=glossterm
+	x-use-popup=#POPUP418895695
+	x-popup-type=expanding
+	href="javascript:kadovTextPopup(this)"
+	id=HotSpot49260><!--kadov_tag{{</spaces>}}-->SWIFT</a><!--begin!kadov{{--><script 
+ type="text/javascript"
+	language=JavaScript1.2><!--
+kadovTextPopupInit('HotSpot49260');
+//--></script><!--}}end!kadov--> 
+ standard, otherwise it is unstructured</p>
+
+<p># FindPayee: The name of the internal function used to extract the</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->payee 
+ name from the description in :86:</p>
+
+<p># FindTxnDate: The name of the internal function used to extract the</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->transaction 
+ date from the description in :86:</p>
+
+<p># FindServerTime: The name of the internal function used to derive the</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->server 
+ timestamp from the file</p>
+
+<p># IntuitBankID: The identifier given to the bank by Intuit if the bank</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->has 
+ signed up to support Quicken. There are rumours that</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->Quicken 
+ will not import an OFX file unless the &lt;INTU.BID&gt;</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->field 
+ is present and correct!</p>
+
+<p># ScriptFile: The name of the file containing VBScript code used to 
+ postprocess</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->the 
+ transaction. If present, this code is used INSTEAD of the internal</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->functions 
+ mentioned above. For details of the scripting capabilities</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->see 
+ the Help information in mt2ofx.chm.</p>
+
+<p># SkipEmptyMemoFields: 1=Empty fields in the :86: data are ignored, 
+ thus avoiding</p>
+
+<p># <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->consecutive, 
+ leading and/or trailing delimiters in the output.</p>
+
+<p>&nbsp;</p>
+
+<!--kadov_tag{{<placeholder id="footer">}}-->
+</body>
+
+</html>

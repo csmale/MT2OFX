@@ -1,0 +1,176 @@
+[BUILDER_INFO]
+Version=2.2.1
+
+[GENERAL_INFO]
+CompanyName=SmaleSoft
+ProductName=MT2OFX
+ProductVersion=V3.3.8
+ProductDescription=Converts downloaded financial statement files to OFX, QFX, OFC or QIF
+ProductURL=http://www.xs4all.nl/~csmale/mt2ofx/
+CopyrightNotice=Copyright © 2003-2005
+
+[SETUP_INFO]
+DefaultInstallationPath=%ProgramFiles%\%ProductName%
+DefaultShortcutFolderName=%ProductName%
+EnableUninstaller=Yes
+AddRemoveProgramsDescription=%ProductName% %ProductVersion%
+ShortcutsInCommonProgramGroups=Yes
+CreateUninstallerIcon=Yes
+UninstallerIconDescription=Uninstall %ProductName%
+SetupType=0
+SetupLanguages=English,Nederlands,Français,Deutsch
+DefaultSetupLanguage=English
+TestReinstall=No
+TestReinstallRegKey=Software\%ProductName%\%ProductVersion%
+ForceRestart=No
+
+[SYSTEM_REQUIREMENTS]
+AnyWindows=Yes
+Windows95=Yes
+Windows98=Yes
+WindowsME=Yes
+WindowsNT4=Yes
+Windows2000=Yes
+WindowsXP=Yes
+LoginAsAdmin=No
+RequiredDiskSpace=2048
+AbortInstallation=No
+
+[DIALOGS]
+SplashWindow=No
+SetupWindow=Yes
+CustomDialogImage=No
+CustomDialogBitmap_Pathname=
+LanguageDialog=Yes
+WelcomeDialog=Yes
+LicenseDialog=No
+ReadmeDialog=Yes
+UserInfoDialog=No
+TargetDirectoryDialog=Yes
+SetupTypeDialog=No
+CustomSetupDialog=No
+ProgramIconOptionsDialog=Yes
+ProgramGroupDialog=Yes
+StartDialog=Yes
+FinishDialog=Yes
+
+[SPLASH_WINDOW]
+Bitmap_Pathname=
+Bitmap_Duration=2
+
+[SETUP_WINDOW]
+WindowTitle=MT2OFX Installer
+GradientFill=Yes
+ColorFrom=0x00FF0000
+ColorTo=0x00000000
+Heading=%ProductName% %ProductVersion%
+HeadingFont=Times New Roman,-32,700,1,0,0
+HeadingColor=0x00FFFFFF
+HeadingAlignment=0
+Heading3D=Yes
+Subheading=%ProductDescription%
+SubheadingFont=Times New Roman,-16,700,1,0,0
+SubheadingColor=0x00FFFFFF
+SubheadingAlignment=0
+Subheading3D=Yes
+Footer=%Copyright% %CompanyName%. All rights reserved. %ProductURL%
+FooterFont=Arial,-13,400,1,0,0
+FooterColor=0x0000FF00
+FooterAlignment=0
+Footer3D=No
+
+[LICENSE_DIALOG]
+License_Pathname=
+
+[README_DIALOG]
+Readme_Pathname=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Readme.txt
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+AddCreateDesktopIconOption=Yes
+AddCreateQuickLaunchIconOption=Yes
+
+[FINISH_DIALOG]
+Show_ViewReadme_CheckBox=Yes
+Show_ViewReadme_Checked=Yes
+Show_RunApplication_CheckBox=Yes
+Show_RunApplication_Checked=Yes
+Readme_Pathname=%AppDir%\Readme.txt
+Application_Pathname=%AppDir%\MT2OFX.exe
+
+[EXTERNAL_TOOLS]
+RunBeforeInstall=No
+BeforeInstall=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Setup\SaveINI.bat,"%AppDir%",%SetupDir%,1,1,3,
+RunAfterInstall=No
+AfterInstall=%AppDir%\SaveINI.bat,,%AppDir%,7,0,0,
+RunBeforeUninstall=No
+BeforeUninstall=,,,1,2,1,
+
+[INI_FILES]
+
+[CREATE_SETUP]
+OutputFolder=C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Setup
+SetupFilename=MT2OFX_V3.3.8.exe
+SetupIconPathname=
+CreateSelfExtractedSetup=Yes
+CreatePasswordProtectedSetup=No
+Password=
+
+[APPLICATION_FILES]
+Folder=%AppDir%\res
+File=%AppDir%\res\french.lng,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\res\french.lng,17,0,32
+File=%AppDir%\res\dutch.lng,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\res\dutch.lng,17,0,32
+File=%AppDir%\res\german.lng,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\res\german.lng,17,0,32
+File=%AppDir%\ABN Amro.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\ABN Amro.vbs,1,4,32
+File=%AppDir%\Fortis.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Fortis.vbs,1,4,32
+File=%AppDir%\Luzerner.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Luzerner.vbs,1,4,32
+File=%AppDir%\MT2OFX.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\MT2OFX.vbs,1,4,32
+File=%AppDir%\Readme.txt,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Readme.txt,1,0,32
+File=%AppDir%\SNS Bank.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\SNS Bank.vbs,1,4,32
+File=%AppDir%\Van Lanschot.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Van Lanschot.vbs,1,4,32
+File=%AppDir%\MT2OFX.exe,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\MT2OFX.exe,1,2,32
+File=%AppDir%\mt2ofx.chm,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\mt2ofx.chm,1,4,32
+File=%AppDir%\Rabo-MutAsc.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Rabo-MutAsc.vbs,1,4,32
+File=%AppDir%\SNSBank-Csv.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\SNSBank-Csv.vbs,1,4,32
+File=%AppDir%\Postbank.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Postbank.vbs,1,4,32
+File=%AppDir%\RaiffeisenbankZurich.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\RaiffeisenbankZurich.vbs,1,4,32
+File=%AppDir%\BernerKantonalbank.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\BernerKantonalbank.vbs,1,4,32
+File=%AppDir%\Postbank-AscCSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Postbank-AscCSV.vbs,1,4,32
+File=%AppDir%\Postbank-MijnPostbankCSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Postbank-MijnPostbankCSV.vbs,1,4,32
+File=%AppDir%\StadtsparkasseDortmund.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\StadtsparkasseDortmund.vbs,1,4,32
+File=%AppDir%\ArgentaNL-TSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\ArgentaNL-TSV.vbs,1,4,32
+File=%AppDir%\ING-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\ING-CSV.vbs,1,4,32
+File=%AppDir%\ING-Asc.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\ING-Asc.vbs,1,4,32
+File=%AppDir%\La Poste-TSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\La Poste-TSV.vbs,1,4,32
+File=%AppDir%\CoopCH.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\CoopCH.vbs,1,4,32
+File=%AppDir%\MoneyXMLReport.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\MoneyXMLReport.vbs,1,4,32
+File=%AppDir%\Generic-QIF.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Generic-QIF.vbs,1,4,32
+File=%AppDir%\SocGen-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\SocGen-CSV.vbs,1,4,32
+File=%AppDir%\VisaNL.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\VisaNL.vbs,1,4,32
+File=%AppDir%\Generic-OFC.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Generic-OFC.vbs,1,4,32
+File=%AppDir%\mt2ofx.ini,.\mt2ofx.ini,25,7,32
+File=%AppDir%\Credit Suisse.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Credit Suisse.vbs,1,4,32
+File=%AppDir%\Generic-OFX.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Generic-OFX.vbs,1,4,32
+File=%AppDir%\Barclaycard-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Barclaycard-CSV.vbs,17,0,32
+File=%AppDir%\Base-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\Base-CSV.vbs,17,0,32
+File=%AppDir%\KBCOnline-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\KBCOnline-CSV.vbs,17,0,32
+File=%AppDir%\SocGen2-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\SocGen2-CSV.vbs,17,0,32
+File=%AppDir%\DexiaBE-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\DexiaBE-CSV.vbs,17,0,32
+File=%AppDir%\AxaBE-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\AxaBE-CSV.vbs,17,0,32
+File=%AppDir%\BankAustria-CSV.vbs,C:\Documents and Settings\Administrator\My Documents\My Projects\MT2OFX\BankAustria-CSV.vbs,17,0,32
+File=%WinSysDir%\COMDLG32.OCX,C:\WINDOWS\system32\COMDLG32.OCX,29,2,128
+File=%WinSysDir%\msscript.ocx,C:\WINDOWS\system32\msscript.ocx,29,2,128
+File=%WinSysDir%\MSCOMCTL.OCX,C:\WINDOWS\system32\MSCOMCTL.OCX,29,2,128
+File=%WinSysDir%\MSCOMCT2.OCX,C:\WINDOWS\system32\MSCOMCT2.OCX,29,2,128
+
+[SHORTCUTS]
+Shortcut=%AppSCFolder%\MT2OFX,%AppDir%\MT2OFX.exe,,%AppDir%\MT2OFX.exe,0,1,%AppDir%,Convert file with MT2OFX
+Shortcut=%AppSCFolder%\MT2OFX From Clipboard,%AppDir%\MT2OFX.exe,/clipboard,%AppDir%\MT2OFX.exe,0,1,%AppDir%,Process the contents of the clipboard with MT2OFX
+
+[REGISTRY_ENTRIES]
+
+[FILE_TYPES]
+.940,MT940.File,MT940 Statement File,%AppDir%\MT2OFX.exe %1,%AppDir%\MT2OFX.exe,0
+.STA,MT940.File,MT940 Statement File,%AppDir%\MT2OFX.exe %1,%AppDir%\MT2OFX.exe,0
+.SWI,MT940.File,MT940 Statement File,%AppDir%\MT2OFX.exe %1,%AppDir%\MT2OFX.exe,0
+.MT,MT940.file,MT940 Statement File,%AppDir%\MT2OFX.exe %1,%AppDir%\MT2OFX.exe,0
+
